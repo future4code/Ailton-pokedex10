@@ -1,8 +1,10 @@
+import React from "react";
+import RouterPage from "./Router/RouterPage";
 
-function App() {
+const App = () => {
   return (
     <div>
-abc
+      <RouterPage />
     </div>
   );
 }
