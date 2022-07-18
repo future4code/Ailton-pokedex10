@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "0a53a84e-e5e8-4fc1-9524-f400f150a67e",
+		"name": "Pokedex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21554777"
+	},
+	"item": [
+		{
+			"name": "Get 20 first Pokemons",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
