@@ -1,6 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { goToDetails, goToPokedex } from '../../Router/coordinator'
+import { goToDetails, goToPokedex } from '../../Routes/coordinator'
+import { Container } from './homePageStyled'
+import CardHomePage from './CardHomePage'
+
 
 const HomePage = () => {
 
@@ -8,11 +11,14 @@ const HomePage = () => {
     
         
   return (
-    <div>HomePage
+
+    <Container>
+      <h1>Todos os Pokémons</h1>
+      {/* <CardHomePage/> */}
     <button onClick={() => goToDetails(navigate)}>DETAILS</button>
     <button onClick={() => goToPokedex(navigate)}>Pokedex</button>
 
-    </div>
+    </Container>
   )
   }
 
