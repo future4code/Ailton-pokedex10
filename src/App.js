@@ -7,7 +7,6 @@ const App = () => {
   return (
     <div>
       <RouterPage />
-      <Header />
       <CardHomePage/>
     </div>
   );
