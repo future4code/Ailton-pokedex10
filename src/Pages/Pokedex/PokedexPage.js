@@ -1,17 +1,24 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { goToHome, goToDetails } from '../../Routes/coordinator'
+import { goToHome } from '../../Routes/coordinator'
+import Header from "../../Header/Header";
+import { ButtonHome, Container, Card} from './pokedexStyled';
+import CardHomePage from '../../Pages/Home/CardHomePage';
 
 const PokedexPage = () => {
 
     const navigate = useNavigate()
 
   return (
-    <div>PokedexPage
-    <button onClick={() => goToHome(navigate)}>HOME</button>
-    <button onClick={() => goToDetails(navigate)}>DETAILS</button>
-
-    </div>
+    <Container>
+        <Header/>
+    <ButtonHome onClick={() => goToHome(navigate)}>Todos os Pokemons</ButtonHome>
+      <h2>PokedexPage</h2>
+      <Card>
+        <CardHomePage/>
+      </Card>
+ 
+    </Container>
   )
 }
 

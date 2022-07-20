@@ -1,18 +1,25 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { goToHome, goToPokedex } from '../../Routes/coordinator'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { goToHome } from "../../Routes/coordinator";
+import Header from "../../Header/Header";
+import CardDetailsPage from "./CardDetailsPage";
+import { Container, Card, ButtonHome } from "./detailsStyled";
 
-const DetailsPage = () =>{
-
-    const navigate = useNavigate()
+const DetailsPage = () => {
+  const navigate = useNavigate();
 
   return (
-    <div>DetailsPage
-    <button onClick={() => goToHome(navigate)}>HOME</button>
-    <button onClick={() => goToPokedex(navigate)}>Pokedex</button>
+    <Container>
+      <Header />
+      <ButtonHome onClick={() => goToHome(navigate)}>
+        Todos os Pokemons
+      </ButtonHome>
+      <h2>DetailsPage</h2>
+      <Card>
+        <CardDetailsPage />
+      </Card>
+    </Container>
+  );
+};
 
-    </div>
-  )
-}
-
-export default DetailsPage
+export default DetailsPage;
