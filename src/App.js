@@ -1,21 +1,25 @@
 import React from "react";
 import RouterPage from "./Routes/RouterPage";
-import Header from "./Header/Header"
-import CardHomePage from './Pages/Home/CardHomePage'
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import GlobalState from "./global/GlobalState";
 
-// const Container = styled.div`
-// display: flex;
-// background-color: #5e5e5e;
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  };
+  `;
 
-// `
-
-const App = ( ) => {
+const App = () => {
   return (
     <div>
-      <RouterPage />
-       </div>
+      <GlobalState>
+        <GlobalStyle />
+        <RouterPage />
+      </GlobalState>
+    </div>
   );
-}
+};
 
 export default App;

@@ -3,11 +3,10 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
   display: flex;
   grid-column: 1/4;
-  width: 1310px;
+  width: 100%;
   height: 150px;
   align-items: center;
   justify-content: space-between;
-  padding-right: 30px;
   background: #d1dee4;
 `;
 
@@ -25,6 +24,7 @@ export const ButtonContainer = styled.button`
   align-items: center;
   width: 180px;
   height: 70px;
+  margin-right: 20px;
   color: #d1dee4;
   background: #015e82;
   border-radius: 8px;
