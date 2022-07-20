@@ -7,7 +7,7 @@ import { Container, Card, ButtonHome } from "./detailsStyled";
 
 const DetailsPage = () => {
   const navigate = useNavigate();
-
+  
   return (
     <Container>
       <Header />

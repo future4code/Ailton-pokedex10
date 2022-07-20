@@ -81,6 +81,7 @@ export const Types = styled.div`
   display: flex;
   flex-direction: row;
   z-index: 2;
+  gap: 5px;
 `;
 
 export const TypeOne = styled.div`

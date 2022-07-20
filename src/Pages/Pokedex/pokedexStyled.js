@@ -4,10 +4,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #012231;
   display: grid;
-  grid-template-columns: repeat(3, 460px);
-  grid-template-rows: 113px repeat(8, 1fr);
+  /* grid-template-columns: repeat(3, 460px);
+  grid-template-rows: 113px repeat(8, 1fr); */
   flex-direction: column;
   padding-bottom: 30px;
+  min-height: 100vh;
+  height: 100%;
 
   h2 {
     display: grid;
