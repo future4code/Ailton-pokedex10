@@ -1,48 +1,45 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-  position: absolute;
-  width: 1440px;
-  height: 160px;
-  left: 0px;
-  top: 0px;
-  background: #ffffff;
-  
-`;  
+  display: flex;
+  grid-column: 1/4;
+  width: 1310px;
+  height: 150px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+  background: #d1dee4;
+`;
 
 export const ImagemContainer = styled.img`
-  position: absolute;
   width: 307px;
   height: 113px;
-  left: 566px;
-  top: 21px;
+  margin: auto;
+  padding-left: 200px;
 `;
 
 export const ButtonContainer = styled.button`
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 4px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 70px;
+  color: #d1dee4;
+  background: #015e82;
+  border-radius: 8px;
+  border: 3px solid #015e82;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 
-position: absolute;
-width: 287px;
-height: 74px;
-left: 1112px;
-top: 41px;
-color: #ffffff;
-background: #33A4F5;
-border-radius: 8px;
-border: 1px solid #33A4F5;
-
-/* Pokédex */
-
-font-family: 'Poppins';
-font-weight: 700;
-font-size: 24px;
-line-height: 36px;
-color: #FFFFFF;
-flex: none;
-order: 0;
-flex-grow: 0;
-` 
+  :hover {
+    color: #fff;
+    font-size: 28px;
+    border-color: #012231;
+    box-shadow: 0 0 40px 40px #012231 inset;
+    background: #012231;
+  }
+`;

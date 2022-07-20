@@ -2,27 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #5e5e5e;
-  width: 1440px;
-  height: 2455px;
+  background-color: #012231;
+  display: grid;
+  grid-template-columns:  repeat(  3, 400px );
+  grid-template-rows: 113px repeat(  8, 1fr );
+  width: 1340px;
+  flex-direction: column;
+  padding-bottom: 30px;
 
-  h1 {
-    height: 72px;
-    width: 420px;
-    left: 40px;
-    top: 220px;
-    border-radius: null;
-    color: white;
-    position: absolute;
-    width: 420px;
-    height: 72px;
-    left: 40px;
-    top: 220px;
-
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 72px;
+ 
+  h2 {
+    display: grid;
+    grid-column: 1/4;
+    padding: 40px;
+    color: #eff6f9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
   }
 `;
