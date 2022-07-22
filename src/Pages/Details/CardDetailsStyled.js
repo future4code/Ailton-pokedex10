@@ -19,9 +19,10 @@ export const PrincipalCard = styled.div`
   grid-gap: 20px;
   width: 900px;
   height: 410px;
-  background: #729f92;
   border-radius: 12px;
+  position: relative;
   margin-left: 50px;
+  z-index: 1;
   /* margin-top: -150px; */
   padding: 10px; 
 `;
