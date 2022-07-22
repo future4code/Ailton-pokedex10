@@ -3,21 +3,27 @@ import styled from "styled-components";
 export const Container = styled.div`
   border-radius: 12px;
   margin-left: 50px;
-  margin-top: -50px;
+  margin-top: -180px;
+`;
+export const Loading = styled.img`
+  margin-left: 320px;
+  margin-top: 40px;
+  width: 230px;
+  height: 200px;
 `;
 
 export const PrincipalCard = styled.div`
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 240px 240px;
+  grid-template-rows: 195px 195px;
   grid-gap: 20px;
   width: 900px;
-  height: 490px;
+  height: 410px;
   background: #729f92;
   border-radius: 12px;
   margin-left: 50px;
-  margin-top: -150px;
-  padding: 10px; ;
+  /* margin-top: -150px; */
+  padding: 10px; 
 `;
 
 export const Info = styled.div`
@@ -56,8 +62,8 @@ export const ImagemPokemon = styled.div`
   margin-left: -50px;
 
   img {
-    width: 210px;
-    height: 210px;
+    width: 220px;
+    height: 220px;
     z-index: 2;
   }
 `;
@@ -65,13 +71,13 @@ export const ImagemPokemon = styled.div`
 export const ImagemBackground = styled.div`
   display: flex;
   grid-column: 4/5;
-  margin-top: -270px;
-  margin-left: -340px;
+  margin-top: -225px;
+  margin-left: -260px;
   z-index: 1;
 
   img {
-    width: 508px;
-    height: 510px;
+    width: 430px;
+    height: 430px;
     opacity: 0.17;
     transform: rotate(30deg);
   }
@@ -80,64 +86,28 @@ export const ImagemBackground = styled.div`
 export const Types = styled.div`
   display: flex;
   flex-direction: row;
-  z-index: 2;
   gap: 5px;
-`;
-
-export const TypeOne = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px 8px;
-  gap: 9px;
-  width: 75px;
-  height: 21px;
-  background: #ad61ae;
-  border: 1px dashed rgba(255, 255, 255, 0.47);
-  border-radius: 8px;
   margin-left: 20px;
-
-  p {
-    width: 46px;
-    height: 21px;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 21px;
-    color: #ffffff;
-    font-family: Verdana;
-  }
+  width: 150px;
+  height: 30px;
 `;
 
-export const TypeTwo = styled.div`
-  display: flex;
-  z-index: 2;
-  margin-left: 10px;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px 8px;
-  gap: 10px;
-  width: 69px;
-  height: 21px;
-  background: #70b873;
-  border: 1px dashed rgba(255, 255, 255, 0.47);
-  border-radius: 8px;
-
-  p {
-    width: 41px;
-    height: 21px;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 21px;
-    color: #ffffff;
-
-    font-family: Verdana;
-  }
+export const Icon = styled.img`
+  height: 14px;
 `;
+
+export const TypeText = styled.p`
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 21px;
+  color: #ffffff;
+  font-family: Verdana;
+  `
 
 export const Photo1 = styled.div`
   grid-column: 1/2;
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   background-color: #fff;
   align-self: flex-end;
   justify-self: end;
@@ -151,8 +121,8 @@ export const Photo1 = styled.div`
 
 export const Photo2 = styled.div`
   grid-row: 2/3;
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   background-color: #fff;
   align-self: flex-start;
   justify-self: end;
@@ -166,10 +136,10 @@ export const Photo2 = styled.div`
 
 export const InfoPoke = styled.div`
   grid-column: 2/3;
-  height: 425px;
+  height: 380px;
   width: 220px;
   background-color: #fff;
-  margin-top: 35px;
+  margin-top: 15px;
   border-radius: 20px;
 
   h3 {
@@ -182,7 +152,7 @@ export const Moves = styled.div`
   display: flex;
   grid-row: 2/2;
   grid-column: 3/4;
-  height: 270px;
+  height: 250px;
   width: 200px;
   background-color: #fff;
   margin-top: -70px;
@@ -194,3 +164,4 @@ export const Moves = styled.div`
     margin-left: 10px;
   }
 `;
+
