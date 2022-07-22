@@ -4,10 +4,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #dc3037;
   width: 100%;
-  min-height:  595px;
+  min-height:  100vh;
   height: 100%;
   flex-direction: column;
-  padding-bottom: 30px;
 
   z-index: 1;
 /*   
@@ -47,7 +46,8 @@ export const ContainerMap = styled.div`
   width: 98vw;
   display: flex;
   flex-wrap: wrap;
-  margin-top:  -80px;
+  margin-top:  -40px;
+  padding-bottom: 30px;
 `;
 
 export const RemoveButton = styled.button`

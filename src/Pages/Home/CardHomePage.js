@@ -63,6 +63,8 @@ const CardHomePage = () => {
 
   const infoPokemons = useRequestData(visible);
 
+  console.log(visible)
+
   const renderPokemons = infoPokemons?.map((pokemon) => {
     const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
     return (
@@ -106,7 +108,7 @@ const CardHomePage = () => {
   return (
     <ContainerMap>
       {renderPokemons}
-      {/* <button onClick={() => setVisible(visible + 20)}>Ver mais</button> */}
+      <button onClick={() => setVisible(visible + 20)}>Ver mais</button>
     </ContainerMap>
   );
 };
