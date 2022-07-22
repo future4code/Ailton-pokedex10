@@ -6,8 +6,17 @@ export const PrincipalCard = styled.div`
   height: 180px;
   background: #729f92;
   border-radius: 12px;
-  margin-left: 80px;
+  margin-left: 75px;
   margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
+
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
 `;
 
 export const Info = styled.div`
@@ -15,6 +24,9 @@ export const Info = styled.div`
   flex-direction: column;
   gap: 5px;
   z-index: 2;
+  width: 175px;
+  height: 70px;
+  /* border: 1px solid black; */
 
   h1 {
     display: flex;
@@ -39,18 +51,19 @@ export const Info = styled.div`
 export const ImagemPokemon = styled.div`
   display: flex;
   margin-top: -60px;
-  margin-left: -148px;
+  margin-left: -140px;
 
   img {
     width: 160px;
     height: 160px;
     z-index: 2;
+    
   }
 `;
 
 export const ImagemBackground = styled.div`
   display: flex;
-  margin-left: -150px;
+  margin-left: -155px;
   margin-top: 0px;
 
   img {
@@ -65,7 +78,10 @@ export const Types = styled.div`
   display: flex;
   flex-direction: row;
   gap: 5px;
-  margin-left: 5px;
+  margin-left: 20px;
+  width: 150px;
+  height: 30px;
+  /* border: 1px solid black; */
 `;
 
 export const Icon = styled.img`
@@ -348,7 +364,7 @@ export const TypeSteel = styled.div`
 export const Buttons = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: -145px;
+  margin-left: -160px;
   margin-top: 140px;
 `;
 
@@ -368,6 +384,7 @@ export const DetailButton = styled.button`
   :hover {
     color: #012231;
     text-decoration: none;
+    
   }
 `;
 export const CaptureButton = styled.div`
@@ -375,8 +392,8 @@ export const CaptureButton = styled.div`
   flex-direction: row;
   color: #ffffff;
   margin-left: 110px;
-
-  button {
+  `
+  export const ButtonCapture = styled.button`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -394,17 +411,40 @@ export const CaptureButton = styled.div`
     font-weight: bold;
     -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  }
-
-  button:hover {
-    background: #d5011d;
+  
+  :hover {
+    background: #014059;
     color: #fff;
     font-weight: bold;
     font-size: 17px;
 
-    box-shadow: 0 0 40px 40px #d5011d inset;
+    box-shadow: 0 0 40px 40px #014059 inset;
   }
-  button:active {
-    color: #d5011d;
-  }
+
 `;
+
+export const Capturado = styled.button`
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    width: 116px;
+    height: 28px;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: Verdana;
+    font-weight: bold;
+    -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+:hover{
+  background: #fff;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+`

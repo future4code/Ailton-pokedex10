@@ -11,10 +11,10 @@ const DetailsPage = () => {
   return (
     <Container>
       <Header />
-      <ButtonHome onClick={() => goToHome(navigate)}>
+      {/* <ButtonHome onClick={() => goToHome(navigate)}>
         Todos os Pokemons
-      </ButtonHome>
-      <h2>DetailsPage</h2>
+      </ButtonHome> */}
+      {/* <h2>Details</h2> */}
       <Card>
         <CardDetailsPage />
       </Card>

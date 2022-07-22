@@ -13,6 +13,8 @@ import {
   Buttons,
   Icon,
   TypeText,
+  Capturado,
+  ButtonCapture,
 } from "./cardHomeStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { goToDetails } from "../../Routes/coordinator";
@@ -75,10 +77,10 @@ const CardHomePage = () => {
             Detalhes
           </DetailButton>
           <CaptureButton>
-            {values.arrayPokemonsId.includes(pokemon.id) ? <button disabled>Capturado!</button> : (
-              <button onClick={() => values.functionAdd(pokemon)}>
-                Capturar!
-              </button>
+            {values.arrayPokemonsId.includes(pokemon.id) ? <Capturado disabled>Capturado</Capturado> : (
+              <ButtonCapture button onClick={() => values.functionAdd(pokemon)}>
+                Capturar
+              </ButtonCapture>
             )}
           </CaptureButton>
         </Buttons>

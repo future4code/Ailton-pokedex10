@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { goToHome, goToDetails } from "../../Routes/coordinator";
+import { goToDetails } from "../../Routes/coordinator";
 import Header from "../../Header/Header";
-import { ButtonHome, Container, Card } from "./pokedexStyled";
+import { ButtonHome, Container, Card ,RemoveButton, HeaderPokedex, ContainerMap} from "./pokedexStyled";
 import CardHomePage from "../../Pages/Home/CardHomePage";
 import { GlobalContext } from "../../global/GlobalContext";
 import styled from "styled-components";
@@ -19,14 +19,11 @@ import {
   Buttons,
   Icon,
   TypeText,
-} from "../Home/cardHomeStyled";
+  } from "../Home/cardHomeStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
+import Pokedex from "../../assests/img/PokedexHeader.jpg";
 
-const ContainerMap = styled.div`
-  width: 98vw;
-  display: flex;
-  flex-wrap: wrap;
-`;
+
 
 const PokedexPage = () => {
   const navigate = useNavigate();
@@ -53,9 +50,9 @@ const PokedexPage = () => {
           </DetailButton>
           <CaptureButton>
             {" "}
-            <button onClick={() => values.functionRemove(pokemon.id)}>
+            <RemoveButton onClick={() => values.functionRemove(pokemon.id)}>
               Remover
-            </button>
+            </RemoveButton>
           </CaptureButton>
         </Buttons>
         <ImagemPokemon>
@@ -71,10 +68,11 @@ const PokedexPage = () => {
   return (
     <Container>
       <Header />
-      <ButtonHome onClick={() => goToHome(navigate)}>
+      <HeaderPokedex src={Pokedex}/>
+      {/* <ButtonHome >
         Todos os Pokemons
-      </ButtonHome>
-      <h2>PokedexPage</h2>
+      </ButtonHome> */}
+      {/* <h2>Pokedex</h2> */}
       <ContainerMap>
         {renderPokemons}
       </ContainerMap>

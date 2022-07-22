@@ -10,11 +10,13 @@ import {
   Photo2,
   InfoPoke,
   Moves,
+  Loading,
 } from "./CardDetailsStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { GlobalContext } from "../../global/GlobalContext";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import LoadingGif from "../../assests/img/loading.gif"
 
 const CardHomePage = () => {
   const pathParams = useParams();
@@ -55,8 +57,8 @@ const CardHomePage = () => {
           </Moves>
           <Info>
             <h3>#0{pokemonDetail.id}</h3>
-            <h1>{pokemonDetail.name}</h1>
-            <Types>
+            <h1>{pokemonDetail.name[0].toUpperCase()+ pokemonDetail.name.substring(1)}</h1>
+              <Types>
               {pokemonDetail.types.map((types) => {
                 return values.typeBackgroundColor(types.type.name);
               })}
@@ -70,7 +72,7 @@ const CardHomePage = () => {
           </ImagemBackground>
         </PrincipalCard>
       ) : (
-        <p> loading...</p>
+        <Loading src={LoadingGif}/>
       )}
     </Container>
   );
