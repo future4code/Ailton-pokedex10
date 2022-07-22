@@ -17,13 +17,15 @@ export const ImagemContainer = styled.img`
   margin: auto;
   padding-top: 15px;
   padding-left: 50px;
-  transition: all 0.5s;
+  transition: all 1s;
     cursor: pointer;
 
-  :hover{
+    
+    :hover{
 -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
 `;
 export const ButtonContainer = styled.img`
    display: flex;
@@ -38,10 +40,23 @@ export const ButtonContainer = styled.img`
 
 
 :hover{
-    -webkit-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
+  animation: shake 0.5s;
+animation-iteration-count: infinite;
 }
-  
+@keyframes shake{
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 `
 // export const ButtonContainer = styled.button`
 //   display: flex;

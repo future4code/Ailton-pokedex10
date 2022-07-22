@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #015e82;
+  background-color: #012231;
   width: 100%;
-  height: 665px;
+  height: 100%;
+  min-height: 664px;
   flex-direction: column;
   padding-bottom: 30px;
 
- 
   h2 {
     display: grid;
     padding: 40px;

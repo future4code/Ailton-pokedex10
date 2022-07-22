@@ -95,7 +95,24 @@ export const TypeText = styled.p`
   color: #ffffff;
   font-family: Verdana;
 `;
+export const PrincipalCardPoison= styled.div`
+  display: flex;
+  width: 340px;
+  height: 180px;
+  background: #e672f7;
+  border-radius: 12px;
+  margin-left: 75px;
+  margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
 
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+`;
 export const TypePoison = styled.div`
   display: flex;
   flex-direction: row;
@@ -108,6 +125,25 @@ export const TypePoison = styled.div`
   border: 1px dashed rgba(255, 255, 255, 0.47);
   border-radius: 8px;
   z-index: 2;
+`;
+
+export const PrincipalCardGrass= styled.div`
+  display: flex;
+  width: 340px;
+  height: 180px;
+  background: #729f92;
+  border-radius: 12px;
+  margin-left: 75px;
+  margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
+
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
 `;
 
 export const TypeGrass = styled.div`
@@ -125,6 +161,25 @@ export const TypeGrass = styled.div`
   border-radius: 8px;
 `;
 
+export const PrincipalCardFire= styled.div`
+  display: flex;
+  width: 340px;
+  height: 180px;
+  background: #EAAB7D;
+  border-radius: 12px;
+  margin-left: 75px;
+  margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
+
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+`;
+
 export const TypeFire = styled.div`
   display: flex;
   z-index: 2;
@@ -138,6 +193,25 @@ export const TypeFire = styled.div`
   /* background: ${(props) => props.color}; */
   border: 1px dashed rgba(255, 255, 255, 0.47);
   border-radius: 8px;
+`;
+
+export const PrincipalCardFlying= styled.div`
+  display: flex;
+  width: 340px;
+  height: 180px;
+  background: #0667ac;
+  border-radius: 12px;
+  margin-left: 75px;
+  margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
+
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
 `;
 
 export const TypeFlying = styled.div`
@@ -155,6 +229,25 @@ export const TypeFlying = styled.div`
   border-radius: 8px;
 `;
 
+export const PrincipalCardWater= styled.div`
+  display: flex;
+  width: 340px;
+  height: 180px;
+  background: #004170;
+  border-radius: 12px;
+  margin-left: 75px;
+  margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
+
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+`;
+
 export const TypeWater = styled.div`
   display: flex;
   z-index: 2;
@@ -168,6 +261,25 @@ export const TypeWater = styled.div`
   /* background: ${(props) => props.color}; */
   border: 1px dashed rgba(255, 255, 255, 0.47);
   border-radius: 8px;
+`;
+
+export const PrincipalCardBug= styled.div`
+  display: flex;
+  width: 340px;
+  height: 180px;
+  background: #37c908;
+  border-radius: 12px;
+  margin-left: 75px;
+  margin-bottom: 60px;
+  border: 1px solid white;
+  box-shadow: 10px 5px 20px black;
+  transition: all 0.1s;
+    cursor: pointer;
+
+  :hover{
+-webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
 `;
 
 export const TypeBug = styled.div`

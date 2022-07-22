@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #012231;
+  background-color: #015e82;
   /* display: grid; */
   /* grid-template-columns:  repeat(  3, 400px );
   grid-template-rows: 113px repeat(  8, 1fr ); */
