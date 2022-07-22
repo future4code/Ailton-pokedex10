@@ -15,6 +15,7 @@ import {
 } from "./CardDetailsStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { GlobalContext } from "../../global/GlobalContext";
+import { CardsBackground } from "../CardsBackgroundColor";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import LoadingGif from "../../assests/img/loading.gif";
@@ -46,6 +47,45 @@ const ImageEvolution = styled.img`
   height: 75px;
 `;
 
+const BarStat = styled.div`
+  height: 7px;
+  background: ${(props) => {
+    if (props.number < 50) {
+      return "#ffdd69";
+    } else if (props.number < 80) {
+      return "#ff7c2d";
+    } else {
+      return "#e05704";
+    }
+  }};
+  border-radius: 6px;
+  width: ${({ percent }) => percent}%;
+`;
+
+const BarStatLength = styled.div`
+  width: 58%;
+`;
+
+const Stats = styled.div`
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0 0 5px;
+
+  p {
+    margin: 0;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+const ContainerStats = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const CardHomePage = () => {
   const pathParams = useParams();
 
@@ -67,8 +107,6 @@ const CardHomePage = () => {
         setPokemonDetail(res.data);
       });
   };
-
-  // console.log(pokemonsEvolution, getId)  POKEMONS EVOLUÇÃO
 
   console.log(pokemonDetail);
 
@@ -112,28 +150,51 @@ const CardHomePage = () => {
   };
 
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pathParams.id}.png`;
-  const urlPhoto1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pathParams.id}.png`
-  const urlGif = `https://pokemon-react-635a4.web.app/images/animated/${pathParams.id}.gif`
+  const urlPhoto1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pathParams.id}.png`;
+  const urlGif = `https://pokemon-react-635a4.web.app/images/animated/${pathParams.id}.gif`;
+  console.log(pokemonDetail);
+
+  const statsName = ["HP", "Attack", "Defense", "Sp.Atk", "Sp.Def", "Speed"];
+
+  const statsTotal = () => {
+    const statsTotal = pokemonDetail.stats
+      .map((stats) => {
+        return stats.base_stat;
+      })
+      .reduce((prev, curr) => prev + curr, 0);
+    return statsTotal;
+  };
 
   return (
     <Container>
       {pokemonDetail.name && pokemonDetail.types ? (
         <PrincipalCard>
+          <CardsBackground color={pokemonDetail.types[0].type.name}></CardsBackground>
           <Photo1>
-               <img src={urlGif} alt="pokemon" width="80px"/>
+            <img src={urlGif} alt="pokemon" width="80px" />
           </Photo1>
-          {/* <Photo2>
-              <img src={urlPhoto1} alt="pokemon" width="80px"/>
-          </Photo2> */}
+          <Photo2>
+            <img src={urlPhoto1} alt="pokemon" width="80px" />
+          </Photo2>
           <InfoPoke>
-            <h3>Info:</h3>
-            {pokemonDetail.stats.map((stats) => {
+            {pokemonDetail.stats.map((stats, index) => {
               return (
-                <p>
-                  {stats.stat.name} - {stats.base_stat}
-                </p>
+                <ContainerStats>
+                  <Stats>
+                    <p>{statsName[index]}</p>
+                    <p>{stats.base_stat}</p>
+                    <BarStatLength>
+                      <BarStat
+                        percent={stats.base_stat}
+                        number={stats.base_stat}
+                      ></BarStat>
+                    </BarStatLength>
+                  </Stats>
+                  {/* <hr width="90%" /> */}
+                </ContainerStats>
               );
             })}
+            <p>Total: {statsTotal()}</p>
           </InfoPoke>
           <Moves>
             <h3>Moves:</h3>
