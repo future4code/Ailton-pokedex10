@@ -11,6 +11,7 @@ import {
   InfoPoke,
   Moves,
   Loading,
+  Evolutions,
 } from "./CardDetailsStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { GlobalContext } from "../../global/GlobalContext";
@@ -109,6 +110,9 @@ const CardHomePage = () => {
               })}
             </div>
           </Moves>
+          <Evolutions>
+          <h3>Evolutions</h3>
+          </Evolutions>
           <Info>
             <h3>#0{pokemonDetail.id}</h3>
             <h1>
