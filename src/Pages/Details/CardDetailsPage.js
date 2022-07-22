@@ -11,6 +11,7 @@ import {
   InfoPoke,
   Moves,
   Loading,
+  Evolutions,
 } from "./CardDetailsStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { GlobalContext } from "../../global/GlobalContext";
@@ -53,8 +54,11 @@ const CardHomePage = () => {
             <h3>Info</h3>
           </InfoPoke>
           <Moves>
-            <h3>Moves</h3>:
+            <h3>Moves</h3>
           </Moves>
+          <Evolutions>
+          <h3>Evolutions</h3>
+          </Evolutions>
           <Info>
             <h3>#0{pokemonDetail.id}</h3>
             <h1>{pokemonDetail.name[0].toUpperCase()+ pokemonDetail.name.substring(1)}</h1>
