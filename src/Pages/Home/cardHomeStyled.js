@@ -5,13 +5,13 @@ export const PrincipalCard = styled.div`
   width: 340px;
   height: 180px;
   position: relative;
-  background: #729f92;
   border-radius: 12px;
   margin-left: 75px;
   margin-bottom: 60px;
   border: 1px solid white;
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
+  z-index: 1;
     cursor: pointer;
 
   :hover{

@@ -15,6 +15,7 @@ import {
 } from "./CardDetailsStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { GlobalContext } from "../../global/GlobalContext";
+import { CardsBackground } from "../CardsBackgroundColor";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import LoadingGif from "../../assests/img/loading.gif";
@@ -164,6 +165,7 @@ const CardHomePage = () => {
     <Container>
       {pokemonDetail.name && pokemonDetail.types ? (
         <PrincipalCard>
+          <CardsBackground color={pokemonDetail.types[0].type.name}></CardsBackground>
           <Photo1>
             <h3>Foto1</h3>
             <img src={urlGif} alt="pokemon" width="80px" />
