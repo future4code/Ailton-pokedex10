@@ -25,11 +25,15 @@ const ContainerEvolution = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  width: 150px;
-  height: 150px;
+  margin: auto;
+  background-color: #ECECEC;
+  width: 120px;
+  height: 130px;
   border-radius: 20px;
-  border: 1px solid black;
+  font-size: 14px;
+  color: grey;
+  border: 1px solid #ECECEC;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   div {
     display: flex;
@@ -167,11 +171,9 @@ const CardHomePage = () => {
         <PrincipalCard>
           <CardsBackground color={pokemonDetail.types[0].type.name}></CardsBackground>
           <Photo1>
-            <h3>Foto1</h3>
             <img src={urlGif} alt="pokemon" width="80px" />
           </Photo1>
           <Photo2>
-            <h3>Foto2</h3>
             <img src={urlPhoto1} alt="pokemon" width="80px" />
           </Photo2>
           <InfoPoke>
@@ -195,7 +197,7 @@ const CardHomePage = () => {
             <p>Total: {statsTotal()}</p>
           </InfoPoke>
           <Moves>
-            <h3>Moves</h3>:
+            <h3>Moves:</h3>
             <div>
               {pokemonDetail.moves.slice(0, 4).map((moves) => {
                 return <p>{moves.move.name}</p>;
@@ -209,8 +211,9 @@ const CardHomePage = () => {
                 return (
                   <ContainerEvolution>
                     <div>
-                      <p>{pokemon}</p>
                       <p>#{getId[index]}</p>
+                      <p>{pokemon[0].toUpperCase() +
+                pokemon.substring(1)}</p>
                     </div>
                     <ImageEvolution
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${getId[index]}.png`}

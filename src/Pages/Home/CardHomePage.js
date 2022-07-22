@@ -45,28 +45,29 @@ const ContainerMap = styled.div`
   width: 98vw;
   display: flex;
   flex-wrap: wrap;
-`;
+  `;
 
 const CardHomePage = () => {
   // const typeList = {
-  //   normal: {
-  //       element: normal,
-  //       type: 'Normal',
-  //       color: '#f2f2f2'
-  //   }
-  // }
-
-  const navigate = useNavigate();
-  const values = useContext(GlobalContext);
-
-  const [visible, setVisible] = useState(20);
+    //   normal: {
+      //       element: normal,
+      //       type: 'Normal',
+      //       color: '#f2f2f2'
+      //   }
+      // }
+      
+      const navigate = useNavigate();
+      const values = useContext(GlobalContext);
+      
+       const [visible, setVisible] = useState(20);
 
   const infoPokemons = useRequestData(visible);
 
   console.log(visible)
 
   const renderPokemons = infoPokemons?.map((pokemon) => {
-    const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
+    // const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
+     const urlPhoto1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon.id}.png`
     return (
       <PrincipalCard key={pokemon.id}>
         <CardsBackground color={pokemon.types[0].type.name}></CardsBackground>
@@ -96,7 +97,7 @@ const CardHomePage = () => {
           </CaptureButton>
         </Buttons>
         <ImagemPokemon>
-          <img src={url} alt="pokemon" />
+          <img src={urlPhoto1} alt="pokemon" />
         </ImagemPokemon>
         <ImagemBackground>
           <img src={Pokebola} alt="pokemon" />
