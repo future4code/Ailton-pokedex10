@@ -18,6 +18,29 @@ import { GlobalContext } from "../../global/GlobalContext";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import LoadingGif from "../../assests/img/loading.gif";
+import styled from "styled-components";
+
+const ContainerEvolution = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  border: 1px solid black;
+
+  div {
+    display: flex;
+    gap: 5px;
+  }
+`;
+
+const ImageEvolution = styled.img`
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+`;
 
 const CardHomePage = () => {
   const pathParams = useParams();
@@ -85,6 +108,8 @@ const CardHomePage = () => {
   };
 
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pathParams.id}.png`;
+  const urlPhoto1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pathParams.id}.png`
+  const urlGif = `https://pokemon-react-635a4.web.app/images/animated/${pathParams.id}.gif`
 
   return (
     <Container>
@@ -92,14 +117,20 @@ const CardHomePage = () => {
         <PrincipalCard>
           <Photo1>
             <h3>Foto1</h3>
+            <img src={urlGif} alt="pokemon" width="80px"/>
           </Photo1>
           <Photo2>
             <h3>Foto2</h3>
+            <img src={urlPhoto1} alt="pokemon" width="80px"/>
           </Photo2>
           <InfoPoke>
             <h3>Info</h3>
             {pokemonDetail.stats.map((stats) => {
-              return <p>{stats.stat.name} - {stats.base_stat}</p>
+              return (
+                <p>
+                  {stats.stat.name} - {stats.base_stat}
+                </p>
+              );
             })}
           </InfoPoke>
           <Moves>
@@ -111,7 +142,23 @@ const CardHomePage = () => {
             </div>
           </Moves>
           <Evolutions>
-          <h3>Evolutions</h3>
+            <h3>Evolutions</h3>
+            <div>
+              {pokemonsEvolution.map((pokemon, index) => {
+                return (
+                  <ContainerEvolution>
+                    <div>
+                      <p>{pokemon}</p>
+                      <p>#{getId[index]}</p>
+                    </div>
+                    <ImageEvolution
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${getId[index]}.png`}
+                      alt="pokemon"
+                    />
+                  </ContainerEvolution>
+                );
+              })}
+            </div>
           </Evolutions>
           <Info>
             <h3>#0{pokemonDetail.id}</h3>

@@ -13,7 +13,7 @@ export const useRequestData = (visible) => {
       );
       Promise.all(pokemonsDetails).then((res) => setData(res));
     });
-  }, []);
+  }, [visible]);
 
   return data;
 };

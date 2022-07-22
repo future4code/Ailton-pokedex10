@@ -178,9 +178,15 @@ export const Evolutions = styled.div`
   border-radius: 20px;
   text-align: center;
   margin-left: 5px;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     font-family: Verdana;
     margin-left: 10px;
+  }
+
+  div {
+    display: flex;
   }
 `;
