@@ -6,10 +6,10 @@ export const Container = styled.div`
   margin-top: -180px;
 `;
 export const Loading = styled.img`
-  margin-left: 320px;
+  margin-left: 350px;
   margin-top: 40px;
   width: 230px;
-  height: 200px;
+  height: 220px;
 `;
 
 export const PrincipalCard = styled.div`
@@ -106,11 +106,11 @@ export const TypeText = styled.p`
 
 export const Photo1 = styled.div`
   grid-column: 1/2;
-  height: 180px;
-  width: 180px;
+  height: 160px;
+  width: 160px;
   background-color: #fff;
-  align-self: flex-end;
-  justify-self: end;
+  align-self: end;
+  justify-self: center;
   border-radius: 20px;
 
   h3 {
@@ -121,11 +121,11 @@ export const Photo1 = styled.div`
 
 export const Photo2 = styled.div`
   grid-row: 2/3;
-  height: 180px;
-  width: 180px;
+  height: 160px;
+  width: 160px;
   background-color: #fff;
   align-self: flex-start;
-  justify-self: end;
+  justify-self: center;
   border-radius: 20px;
 
   h3 {
@@ -136,11 +136,12 @@ export const Photo2 = styled.div`
 
 export const InfoPoke = styled.div`
   grid-column: 2/3;
-  height: 380px;
-  width: 220px;
+  height: 180px;
+  width: 250px;
   background-color: #fff;
   margin-top: 15px;
   border-radius: 20px;
+  margin-left: -30px;
 
   h3 {
     margin-left: 10px;
@@ -151,13 +152,14 @@ export const InfoPoke = styled.div`
 export const Moves = styled.div`
   display: flex;
   grid-row: 2/2;
-  grid-column: 3/4;
-  height: 250px;
-  width: 200px;
+  grid-column: 2/3;
+  height: 180px;
+  width: 250px;
   background-color: #fff;
-  margin-top: -70px;
+  margin-top: 0px;
   border-radius: 20px;
   text-align: center;
+  margin-left: -30px;
 
   h3 {
     font-family: Verdana;
@@ -165,3 +167,20 @@ export const Moves = styled.div`
   }
 `;
 
+export const Evolutions = styled.div`
+  display: flex;
+  grid-row: 2/2;
+  grid-column: 3/4;
+  height: 250px;
+  width: 370px;
+  background-color: #fff;
+  margin-top: -70px;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 5px;
+
+  h3 {
+    font-family: Verdana;
+    margin-left: 10px;
+  }
+`;
