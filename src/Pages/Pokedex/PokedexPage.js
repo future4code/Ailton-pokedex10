@@ -10,8 +10,6 @@ import {
   PrincipalCard,
   ImagemPokemon,
   ImagemBackground,
-  TypeGrass,
-  TypePoison,
   DetailButton,
   CaptureButton,
   Info,
