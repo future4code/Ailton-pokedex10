@@ -2,28 +2,8 @@ import React, { useState } from "react";
 import { GlobalContext } from "./GlobalContext";
 // import { TypeNormal, TypeFire, TypeWater, TypeGrass, TypeFlying, TypePoison, TypeElectric, TypeGround, TypeRock, TypePsychic, TypeIce, TypeBug, TypeGhost, TypeSteel, TypeDragon, TypeDark, TypeFairy} from "../styled-components/TypeBackgroundColor"
 import { useRequestData } from "../hooks/useRequestData";
-import {
-  TypePoison,
-  TypeGrass,
-  Icon,
-  TypeText,
-  TypeBug,
-  TypeDark,
-  TypeDragon,
-  TypeElectric,
-  TypeFairy,
-  TypeFighting,
-  TypeFire,
-  TypeFlying,
-  TypeGround,
-  TypeGhost,
-  TypeIce,
-  TypeNormal,
-  TypePsychic,
-  TypeRock,
-  TypeSteel,
-  TypeWater,
-} from "../Pages/Home/cardHomeStyled";
+import { Icon, TypeText } from "../Pages/Home/cardHomeStyled";
+import {TypePokemon} from "../Pages/TypesBackgroundColor"
 import Poison from "../assests/img/Poison.png";
 import Grass from "../assests/img/Grass.png";
 import bug from "../assests/img/bug.png";
@@ -47,7 +27,7 @@ export default function GlobalState(props) {
   const Provider = GlobalContext.Provider;
 
   const infoPokemons = useRequestData();
-  
+
   const [pokemonsInsidePokedex, setPokemonsInsidePokedex] = useState([]);
 
   const arrayPokemonsId = pokemonsInsidePokedex.map((pokemon) => {
@@ -66,135 +46,126 @@ export default function GlobalState(props) {
     setPokemonsInsidePokedex(arrayPokemonRemoved);
   };
 
-//   const typeList = {
-//     normal: {
-//       element: normal,
-//       type: "Normal",
-//     },
-//   };
-
-//   console.log(typeList["normal"].element);
-
   const typeBackgroundColor = (type) => {
     switch (type) {
       case "normal":
         return (
-          <TypeNormal>
+          <TypePokemon type="normal">
             <Icon src={normal} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeNormal>
+          </TypePokemon>
         );
       case "fire":
         return (
-          <TypeFire>
+          <TypePokemon type="fire">
             <Icon src={fire} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeFire>
+          </TypePokemon>
         );
       case "water":
         return (
-          <TypeWater>
+          <TypePokemon type="water">
             <Icon src={water} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeWater>
+          </TypePokemon>
         );
       case "grass":
         return (
-          <TypeGrass>
+          <TypePokemon type="grass">
             <Icon src={Grass} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeGrass>
+          </TypePokemon>
         );
       case "flying":
         return (
-          <TypeFlying>
+          <TypePokemon type="flying">
             <Icon src={flying} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeFlying>
+          </TypePokemon>
         );
       case "poison":
         return (
-          <TypePoison>
+          <TypePokemon type="poison">
             <Icon src={Poison} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypePoison>
+          </TypePokemon>
         );
       case "electric":
         return (
-          <TypeElectric>
+          <TypePokemon type="electric">
             <Icon src={electric} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeElectric>
+          </TypePokemon>
         );
       case "ground":
         return (
-          <TypeGround>
+          <TypePokemon type="ground">
             <Icon src={ground} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeGround>
+          </TypePokemon>
         );
       case "rock":
         return (
-          <TypeRock>
+          <TypePokemon type="rock">
             <Icon src={rock} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeRock>
+          </TypePokemon>
         );
       case "psychic":
         return (
-          <TypePsychic>
+          <TypePokemon type="psychic">
             <Icon src={psychic} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypePsychic>
+          </TypePokemon>
         );
       case "ice":
         return (
-          <TypeIce>
+          <TypePokemon type="ice">
             <Icon src={ice} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeIce>
+          </TypePokemon>
         );
       case "bug":
         return (
-          <TypeBug>
+          <TypePokemon type="bug">
             <Icon src={bug} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeBug>
+          </TypePokemon>
         );
       case "ghost":
         return (
-          <TypeGhost>
+          <TypePokemon type="ghost">
             <Icon src={ghost} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeGhost>
+          </TypePokemon>
         );
       case "steel":
         return (
-          <TypeSteel>
+          <TypePokemon type="steel">
             <Icon src={steel} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeSteel>
+          </TypePokemon>
         );
       case "dragon":
         return (
-          <TypeDragon>
+          <TypePokemon type="dragon">
             <Icon src={dragon} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeDragon>
+          </TypePokemon>
         );
       case "dark":
         return (
-          <TypeDark>
+          <TypePokemon type="dark">
             <Icon src={dark} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeDark>
+          </TypePokemon>
         );
       case "fairy":
         return (
-          <TypeFairy>
+          <TypePokemon type="fairy">
             <Icon src={fairy} />
             <TypeText>{type[0].toUpperCase() + type.substring(1)}</TypeText>
-          </TypeFairy>
+          </TypePokemon>
         );
       default:
         return null;
