@@ -109,14 +109,15 @@ export const Photo1 = styled.div`
   height: 160px;
   width: 160px;
   background-color: #fff;
-  align-self: end;
+  align-self: center;
   justify-self: center;
   border-radius: 20px;
 
-  h3 {
-    margin-left: 10px;
-    font-family: Verdana;
-  }
+img{
+  display: flex;
+margin-top: 15%;
+margin-left: 24%;
+}
 `;
 
 export const Photo2 = styled.div`
@@ -128,16 +129,18 @@ export const Photo2 = styled.div`
   justify-self: center;
   border-radius: 20px;
 
-  h3 {
-    margin-left: 10px;
-    font-family: Verdana;
-  }
+  img{
+  display: flex;
+  width: 120px;
+margin-top: 15%;
+margin-left: 25%;
+}
 `;
 
 export const InfoPoke = styled.div`
   grid-column: 2/3;
-  height: 180px;
-  width: 250px;
+  height: 380px;
+  width: 240px;
   background-color: #fff;
   margin-top: 15px;
   border-radius: 20px;
@@ -147,23 +150,46 @@ export const InfoPoke = styled.div`
     margin-left: 10px;
     font-family: Verdana;
   }
+
+    p{
+    text-align: start;
+    margin: 5px auto;
+    padding: 3px;
+    /* border-radius: 20px; */
+    font-size: 11px;
+    line-height: 8px;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 `;
 
 export const Moves = styled.div`
-  display: flex;
-  grid-row: 2/2;
-  grid-column: 2/3;
-  height: 180px;
-  width: 250px;
+   grid-row: 2/3;
+  height: 200px;
+  width: 160px;
   background-color: #fff;
-  margin-top: 0px;
+  align-self: flex-start;
+  justify-self: center;
   border-radius: 20px;
-  text-align: center;
-  margin-left: -30px;
+  margin-top: -20px;
 
   h3 {
     font-family: Verdana;
-    margin-left: 10px;
+    text-align: center;
+
+  }
+
+  p{
+    text-align: center;
+    margin: 5px auto;
+    padding: 3px;
+    width: 80px;
+    border: 1px solid #ECECEC;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    font-size: 11px;
+    line-height: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 `;
 
@@ -172,12 +198,12 @@ export const Evolutions = styled.div`
   grid-row: 2/2;
   grid-column: 3/4;
   height: 250px;
-  width: 370px;
+  width: 400px;
   background-color: #fff;
   margin-top: -70px;
   border-radius: 20px;
   text-align: center;
-  margin-left: 5px;
+  margin-left: -10px;
   display: flex;
   flex-direction: column;
 
