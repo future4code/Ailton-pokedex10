@@ -11,29 +11,29 @@ export const CardsBackground = styled.div`
       case "grass":
         return "#729f92";
       case "steel":
-        return "#f4f4f4";
+        return "#c5c0c0";
       case "fire":
         return "#EAAB7D";
       case "electric":
-        return "#fcf7de";
+        return "#f5e491";
       case "water":
         return "#71C3FF";
       case "ice":
-        return "#def3fd";
+        return "#b7e3f9";
       case "ground":
-        return "#f4e7da";
+        return "#f7cca2";
       case "rock":
-        return "#d5d5d4";
+        return "#e3d7b4";
       case "fairy":
-        return "#fceaff";
+        return "#edb6f7";
       case "dragon":
         return "#97b3e6";
       case "psychic":
-        return "#eaeda1";
+        return "#f79598";
       case "flying":
         return "#f5f5f5";
       case "fighting":
-        return "#f5f5f5";
+        return "#f2c4c4";
       case "normal":
         return "#BF9762";
       case "bug":

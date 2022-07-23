@@ -24,7 +24,7 @@ export const PrincipalCard = styled.div`
   margin-left: 50px;
   z-index: 1;
   /* margin-top: -150px; */
-  padding: 10px; 
+  padding: 10px;
 `;
 
 export const Info = styled.div`
@@ -80,7 +80,7 @@ export const ImagemBackground = styled.div`
     width: 430px;
     height: 430px;
     opacity: 0.17;
-    transform: rotate(30deg);
+    /* transform: rotate(30deg); */
   }
 `;
 
@@ -103,7 +103,7 @@ export const TypeText = styled.p`
   line-height: 21px;
   color: #ffffff;
   font-family: Verdana;
-  `
+`;
 
 export const Photo1 = styled.div`
   grid-column: 1/2;
@@ -114,11 +114,11 @@ export const Photo1 = styled.div`
   justify-self: center;
   border-radius: 20px;
 
-img{
-  display: flex;
-margin-top: 15%;
-margin-left: 24%;
-}
+  img {
+    display: flex;
+    margin-top: 15%;
+    margin-left: 24%;
+  }
 `;
 
 export const Photo2 = styled.div`
@@ -130,12 +130,12 @@ export const Photo2 = styled.div`
   justify-self: center;
   border-radius: 20px;
 
-  img{
-  display: flex;
-  width: 120px;
-margin-top: 15%;
-margin-left: 25%;
-}
+  img {
+    display: flex;
+    width: 120px;
+    margin-top: 15%;
+    margin-left: 25%;
+  }
 `;
 
 export const InfoPoke = styled.div`
@@ -146,13 +146,15 @@ export const InfoPoke = styled.div`
   margin-top: 15px;
   border-radius: 20px;
   margin-left: -30px;
+  display: flex;
+  align-items: center;
 
   h3 {
     margin-left: 10px;
     font-family: Verdana;
   }
 
-    p{
+  p {
     text-align: start;
     margin: 5px auto;
     padding: 3px;
@@ -165,7 +167,7 @@ export const InfoPoke = styled.div`
 `;
 
 export const Moves = styled.div`
-   grid-row: 2/3;
+  grid-row: 2/3;
   height: 200px;
   width: 160px;
   background-color: #fff;
@@ -177,16 +179,15 @@ export const Moves = styled.div`
   h3 {
     font-family: Verdana;
     text-align: center;
-
   }
 
-  p{
+  p {
     text-align: center;
     margin: 5px auto;
     padding: 3px;
     width: 80px;
-    border: 1px solid #ECECEC;
-    background-color: #ECECEC;
+    border: 1px solid #ececec;
+    background-color: #ececec;
     border-radius: 20px;
     font-size: 11px;
     line-height: 8px;

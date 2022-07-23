@@ -5,9 +5,10 @@ export const TypePokemon = styled.div`
   z-index: 2;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 5px 8px;
   gap: 5px;
-  width: 56px;
+  width: 59px;
   height: 18px;
   border: 1px dashed rgba(255, 255, 255, 0.47);
   border-radius: 8px;
