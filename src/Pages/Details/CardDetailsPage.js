@@ -26,13 +26,13 @@ const ContainerEvolution = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto;
-  background-color: #ECECEC;
+  background-color: #ececec;
   width: 120px;
   height: 130px;
   border-radius: 20px;
   font-size: 14px;
   color: grey;
-  border: 1px solid #ECECEC;
+  border: 1px solid #ececec;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   div {
@@ -63,28 +63,51 @@ const BarStat = styled.div`
 `;
 
 const BarStatLength = styled.div`
-  width: 58%;
+  width: 80%;
+  display: flex;
+  align-items: center;
 `;
 
 const Stats = styled.div`
   display: flex;
-  font-size: 12px;
+  flex-direction: column;
   align-items: center;
   gap: 5px;
-  margin: 10px 0 0 5px;
 
   p {
     margin: 0;
-    width: 18%;
     display: flex;
+    font-size: 12px;
     justify-content: center;
   }
 `;
 
-const ContainerStats = styled.div`
+const ContainerStatAndBar = styled.div`
+  width: 100%;
+  display: flex;
+
+  p {
+    width: 12%;
+  }
+
+`
+
+const ContainerStatsMap = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+const ContainerStats = styled.div`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+`;
+
+const TotalText = styled.p`
+  font-weight: bold;
+`
 
 const CardHomePage = () => {
   const pathParams = useParams();
@@ -169,32 +192,38 @@ const CardHomePage = () => {
     <Container>
       {pokemonDetail.name && pokemonDetail.types ? (
         <PrincipalCard>
-          <CardsBackground color={pokemonDetail.types[0].type.name}></CardsBackground>
+          <CardsBackground
+            color={pokemonDetail.types[0].type.name}
+          ></CardsBackground>
           <Photo1>
             <img src={urlGif} alt="pokemon" width="80px" />
           </Photo1>
-          <Photo2>
+          {/* <Photo2>
             <img src={urlPhoto1} alt="pokemon" width="80px" />
-          </Photo2>
+          </Photo2> */}
           <InfoPoke>
-            {pokemonDetail.stats.map((stats, index) => {
-              return (
-                <ContainerStats>
-                  <Stats>
-                    <p>{statsName[index]}</p>
-                    <p>{stats.base_stat}</p>
-                    <BarStatLength>
-                      <BarStat
-                        percent={stats.base_stat}
-                        number={stats.base_stat}
-                      ></BarStat>
-                    </BarStatLength>
-                  </Stats>
-                  {/* <hr width="90%" /> */}
-                </ContainerStats>
-              );
-            })}
-            <p>Total: {statsTotal()}</p>
+            <ContainerStats>
+              {pokemonDetail.stats.map((stats, index) => {
+                return (
+                  <ContainerStatsMap>
+                    <Stats>
+                      <p><strong>{statsName[index]}</strong></p>
+                      <ContainerStatAndBar>
+                        <p>{stats.base_stat}</p>
+                        <BarStatLength>
+                          <BarStat
+                            percent={stats.base_stat}
+                            number={stats.base_stat}
+                          ></BarStat>
+                        </BarStatLength>
+                      </ContainerStatAndBar>
+                    </Stats>
+                    <hr width="90%" />
+                  </ContainerStatsMap>
+                );
+              })}
+              <TotalText>Total: {statsTotal()}</TotalText>
+            </ContainerStats>
           </InfoPoke>
           <Moves>
             <h3>Moves:</h3>
@@ -212,8 +241,7 @@ const CardHomePage = () => {
                   <ContainerEvolution>
                     <div>
                       <p>#{getId[index]}</p>
-                      <p>{pokemon[0].toUpperCase() +
-                pokemon.substring(1)}</p>
+                      <p>{pokemon[0].toUpperCase() + pokemon.substring(1)}</p>
                     </div>
                     <ImageEvolution
                       src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${getId[index]}.png`}
