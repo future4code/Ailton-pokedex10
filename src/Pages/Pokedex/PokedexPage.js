@@ -3,24 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { goToDetails } from "../../Routes/coordinator";
 import Header from "../../Header/Header";
 import { CardsBackground } from "../CardsBackgroundColor";
-// import fire from "../../assests/img/battleimg/fire.jpg";
-// import bug from "../../assests/img/battleimg/bug.jpg";
-// import dark from "../../assests/img/battleimg/dark.jpg";
-// import dragon from "../../assests/img/battleimg/dragon.jpg";
-// import electric from "../../assests/img/battleimg/electric.jpg";
-// import fairy from "../../assests/img/battleimg/fairy.jpg";
-// import fighting from "../../assests/img/battleimg/fighting.jpg";
-// import flying from "../../assests/img/battleimg/flying.jpg";
-// import ghost from "../../assests/img/battleimg/ghost.jpg";
-// import grass from "../../assests/img/battleimg/grass.jpg";
-// import ground from "../../assests/img/battleimg/ground.jpg";
-// import ice from "../../assests/img/battleimg/ice.jpg";
-// import normal from "../../assests/img/battleimg/normal.jpg";
-// import poison from "../../assests/img/battleimg/poison.jpg";
-// import rock from "../../assests/img/battleimg/rock.png";
-// import steel from "../../assests/img/battleimg/steel.jpg";
-// import water from "../../assests/img/battleimg/water.jpg";
-// import psychicbackground from "../../assests/img/battleimg/psychicbackground.png";
 import {
   ButtonHome,
   Container,
@@ -127,32 +109,6 @@ const ImageUpToBattle = styled.img`
   bottom: 39%;
   z-index: 2;
 `;
-
-// const Background = styled.div`
-//   background-image: url(${(props) => props.url});
-//   background-size: 100% 100%;
-//   height: 100%;
-//   border-top-left-radius: 8px;
-//   border-bottom-left-radius: 8px;
-//   width: 50%;
-//   top: 0;
-//   left: 0;
-//   position: absolute;
-//   z-index: 0;
-// `;
-
-// const BackgroundRight = styled.div`
-//   background-image: url(${(props) => props.url});
-//   background-size: 100% 100%;
-//   height: 100%;
-//   border-top-right-radius: 8px;
-//   border-bottom-right-radius: 8px;
-//   width: 50%;
-//   top: 0;
-//   right: 0;
-//   position: absolute;
-//   z-index: 0;
-// `;
 
 const ImageBackground = styled.img`
   position: absolute;
