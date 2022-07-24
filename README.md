@@ -1,4 +1,4 @@
-# POKEDEX
+- # POKEDEX
 
 Nome dos integrantes: 
 - Tiago Fonseca

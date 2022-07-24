@@ -102,7 +102,9 @@ ${type1} possui desvantagem contra ${type2}`
     }
   };
 
-  if (type1 === "normal" && type2 === "fighting") {
+  if (type1 === "normal" && 
+  (type2 === "fighting" || type2 === "ghost")
+  ) {
     battleTypeDisadvantageResults();
   } else if (
     type1 === "grass" &&
@@ -147,7 +149,7 @@ ${type1} possui desvantagem contra ${type2}`
     battleTypeDisadvantageResults();
   } else if (
     type1 === "flying" &&
-    (type2 === "bug" || type2 === "fighting" || type2 === "grass")
+    (type2 === "bug" || type2 === "fighting" || type2 === "grass" || type2 === "ground")
   ) {
     battleTypeAdvantageResults();
   } else if (
@@ -194,7 +196,7 @@ ${type1} possui desvantagem contra ${type2}`
       type2 === "fire" ||
       type2 === "poison" ||
       type2 === "rock" ||
-      type2 === "steel")
+      type2 === "steel")        
   ) {
     battleTypeAdvantageResults();
   } else if (
@@ -204,7 +206,7 @@ ${type1} possui desvantagem contra ${type2}`
     battleTypeDisadvantageResults();
   } else if (
     type1 === "steel" &&
-    (type2 === "fairy" || type2 === "ice" || type2 === "rock")
+    (type2 === "fairy" || type2 === "ice" || type2 === "rock" || type2 === "poison")
   ) {
     battleTypeAdvantageResults();
   } else if (
@@ -267,7 +269,9 @@ ${type1} possui desvantagem contra ${type2}`
     battleTypeAdvantageResults();
   } else if (type1 === "fairy" && (type2 === "steel" || type2 === "poison")) {
     battleTypeDisadvantageResults();
-  } else if (type1 === "ghost" && type2 === "psychic") {
+  } else if (type1 === "ghost" && 
+   (type2 === "psychic" || type2 === "normal" || type2 === "fighting")
+  ) {
     battleTypeAdvantageResults();
   } else if (type1 === "ghost" && type2 === "dark") {
     battleTypeDisadvantageResults();
