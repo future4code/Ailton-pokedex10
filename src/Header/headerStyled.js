@@ -9,6 +9,11 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   background: #b7c3c8;
   margin-bottom: 110px;
+  /* margin-bottom: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; */
 `;
 
 export const ImagemContainer = styled.img`

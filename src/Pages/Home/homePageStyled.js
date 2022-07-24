@@ -11,6 +11,7 @@ export const Container = styled.div`
   min-height: 95.5vh;
   flex-direction: column;
   padding-bottom: 30px;
+padding-top: 15%;
 
  
   h2 {

@@ -15,6 +15,16 @@ const Header = () => {
     <HeaderContainer>
       <ImagemContainer onClick={() => goToHome(navigate)} src={LogoPokemon}/>
       <ButtonContainer onClick={() => goToPokedex(navigate)} src={Pokedex}></ButtonContainer>
+      {/* <ContainerBusca>
+          <input
+            value={inputSearch}
+            onChange={(e) => setInputSearch(e.target.value)}
+            placeholder="Buscar pokemon"
+          />  
+          <button onClick={() => searchPokemon(inputSearch)}>
+            buscar
+          </button>
+        </ContainerBusca> */}
     </HeaderContainer>
   );
 };

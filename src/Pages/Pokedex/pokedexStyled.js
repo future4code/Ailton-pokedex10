@@ -7,20 +7,9 @@ export const Container = styled.div`
   min-height:  100vh;
   height: 100%;
   flex-direction: column;
-
+  /* padding-top: 15%; */
   z-index: 1;
-/*   
 
- 
-  h2 {
-    display: grid;
-    padding: 40px;
-    color: #eff6f9;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 45px;
-    margin: 0 0 30px 0;
-    text-align: center;
-  } */
 `;
 export const ButtonHome = styled.button`
   display: flex;
@@ -36,6 +25,7 @@ export const ButtonHome = styled.button`
   z-index: 2;
   margin-top: -45px;
   margin-left: 30px;
+
   
 
   :hover {
