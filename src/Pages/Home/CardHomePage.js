@@ -22,6 +22,24 @@ import { CardsBackground } from "../CardsBackgroundColor";
 import { useRequestData } from "../../hooks/useRequestData";
 import axios from "axios";
 
+
+const VerMais = styled.button`
+margin-left: 44%;
+background-color: none ;
+background: none;
+border-radius: 8%;
+border: none;
+color: #fff;
+/* width: 130px;
+height: 30px; */
+font-size: 16px;
+font-weight: bold;
+
+:hover{
+    text-decoration: underline;
+  /* font-size: 18px; */
+}
+`;
 const ContainerMap = styled.div`
   width: 98vw;
   display: flex;
@@ -167,7 +185,7 @@ const CardHomePage = () => {
       ) : (
         <ContainerMap>{renderPokemons}</ContainerMap>
       )}
-      <button onClick={() => setVisible(visible + 20)}>Ver mais</button>
+      <VerMais onClick={() => setVisible(visible + 20)}>Mais Pokemons</VerMais>
     </div>
   );
 };

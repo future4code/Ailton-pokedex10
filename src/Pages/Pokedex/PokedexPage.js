@@ -34,6 +34,9 @@ const ButtonBattle = styled.button`
   height: 50px;
   width: 90px;
   margin-top: 20px;
+  border-radius: 20%;
+  background-color: #ffc400 ;
+  border: #005e81 ;
 `;
 
 const ContainerBattle = styled.div`
