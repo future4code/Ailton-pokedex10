@@ -4,12 +4,22 @@ export const Container = styled.div`
   border-radius: 12px;
   margin-left: 50px;
   margin-top: -180px;
+
+  @media screen and (max-width: 480px){
+    width: 100%;
+  }
+
 `;
 export const Loading = styled.img`
   margin-left: 350px;
   margin-top: 40px;
   width: 230px;
   height: 220px;
+
+  @media screen and (max-width: 480px){
+    width:130px;
+  height: 120px;
+  }
 `;
 
 export const PrincipalCard = styled.div`
@@ -25,6 +35,17 @@ export const PrincipalCard = styled.div`
   z-index: 1;
   /* margin-top: -150px; */
   padding: 10px;
+
+  @media screen and (max-width: 480px){
+    display: grid;
+    width: 330px;
+    height: 1060px;
+    margin-left: -140px;
+  grid-template-columns: 50% 50% ;
+  grid-template-rows: 195px 195px 195px 195px 195px;
+  /* padding-bottom: 10px; */
+
+  }
 `;
 
 export const Info = styled.div`
@@ -54,19 +75,33 @@ export const Info = styled.div`
     margin-top: 35px;
     margin-bottom: -25px;
   }
+
+  @media screen and (max-width: 480px){
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: -10px;
+    margin-left: -15px;
+    width: 130px;
+
+}
+
 `;
 
 export const ImagemPokemon = styled.div`
   display: flex;
   grid-column: 4/5;
   margin-top: -100px;
-  margin-left: -50px;
+  
 
   img {
     width: 220px;
     height: 220px;
     z-index: 2;
   }
+  @media screen and (max-width: 480px){
+display: none;
+
+ }
 `;
 
 export const ImagemBackground = styled.div`
@@ -82,6 +117,11 @@ export const ImagemBackground = styled.div`
     opacity: 0.17;
     /* transform: rotate(30deg); */
   }
+
+  @media screen and (max-width: 480px){
+display: none;
+
+ }
 `;
 
 export const Types = styled.div`
@@ -119,27 +159,17 @@ export const Photo1 = styled.div`
     margin-top: 15%;
     margin-left: 24%;
   }
-`;
-
-export const Photo2 = styled.div`
-  grid-row: 2/3;
-  height: 160px;
-  width: 160px;
-  background-color: #fff;
-  align-self: flex-start;
-  justify-self: center;
-  border-radius: 20px;
-
-  img {
-    display: flex;
-    width: 120px;
-    margin-top: 15%;
-    margin-left: 25%;
-  }
+  @media screen and (max-width: 480px){
+    height: 130px;
+  width: 130px;
+grid-column: 2/3;
+margin-top: -60px;
+}
+  
 `;
 
 export const InfoPoke = styled.div`
-  grid-column: 2/3;
+  grid-column : 2/3;
   height: 380px;
   width: 240px;
   background-color: #fff;
@@ -157,13 +187,31 @@ export const InfoPoke = styled.div`
   p {
     text-align: start;
     margin: 5px auto;
-    padding: 3px;
+    padding: 1px;
     /* border-radius: 20px; */
     font-size: 11px;
-    line-height: 8px;
+    line-height: 2px;
     margin-left: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  @media screen and (max-width: 480px){
+
+grid-row: 2/3;
+grid-column: 1/4;
+margin-left: 30px;
+margin-top: -60px;
+height: 500px;
+  width: 280px;
+
+  h3{
+   margin-left: 100px;
+  }
+
+  p{
+    margin-left: 80px;  
+  }
+}
 `;
 
 export const Moves = styled.div`
@@ -193,11 +241,19 @@ export const Moves = styled.div`
     line-height: 8px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  @media screen and (max-width: 480px){
+    margin-top: 30px;
+grid-row: 4/5;
+height: 155px;
+width: 330px;
+margin-left: 160px;
+}
 `;
 
 export const Evolutions = styled.div`
   display: flex;
-  grid-row: 2/2;
+  grid-row: 2/3;
   grid-column: 3/4;
   height: 250px;
   width: 400px;
@@ -217,4 +273,13 @@ export const Evolutions = styled.div`
   div {
     display: flex;
   }
+
+  @media screen and (max-width: 480px){
+    height: 200px;
+  width: 330px;
+grid-row: 5/6 ;
+margin-top: -5px;
+margin-left: 3px;
+
+}
 `;

@@ -13,6 +13,10 @@ import {
   TypeText,
   Capturado,
   ButtonCapture,
+  VerMais,
+  ContainerMap,
+  ContainerBusca,
+  ButtonBackSearch
 } from "./cardHomeStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { goToDetails } from "../../Routes/coordinator";
@@ -21,44 +25,6 @@ import styled from "styled-components";
 import { CardsBackground } from "../CardsBackgroundColor";
 import { useRequestData } from "../../hooks/useRequestData";
 import axios from "axios";
-
-
-const VerMais = styled.button`
-margin-left: 44%;
-background-color: none ;
-background: none;
-border-radius: 8%;
-border: none;
-color: #fff;
-/* width: 130px;
-height: 30px; */
-font-size: 16px;
-font-weight: bold;
-
-:hover{
-    text-decoration: underline;
-  /* font-size: 18px; */
-}
-`;
-const ContainerMap = styled.div`
-  width: 98vw;
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const InputBuscar = styled.input``;
-
-const ContainerBusca = styled.div`
-  position: absolute;
-  left: 6%;
-  top: 15%;
-`;
-
-const ButtonBackSearch = styled.button`
-  position: absolute;
-  left: 6%;
-  top: 15%;
-`;
 
 const CardHomePage = () => {
   const navigate = useNavigate();
@@ -173,7 +139,7 @@ const CardHomePage = () => {
           <input
             value={inputSearch}
             onChange={(e) => setInputSearch(e.target.value)}
-            placeholder="Buscar pokemon"
+            placeholder="Buscar Pokemon"
           />  
           <button onClick={() => searchPokemon(inputSearch)}>
             buscar

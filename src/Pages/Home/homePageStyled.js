@@ -11,7 +11,7 @@ export const Container = styled.div`
   min-height: 95.5vh;
   flex-direction: column;
   padding-bottom: 30px;
-padding-top: 15%;
+/* padding-top: 15%; */
 
  
   h2 {
@@ -23,5 +23,10 @@ padding-top: 15%;
     font-size: 45px;
     margin: 0 0 25px 0;
     /* text-align: center; */
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 375px;
+padding-bottom:20px; 
   }
 `;
