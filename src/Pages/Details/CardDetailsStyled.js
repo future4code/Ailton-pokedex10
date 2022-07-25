@@ -187,10 +187,10 @@ export const InfoPoke = styled.div`
   p {
     text-align: start;
     margin: 5px auto;
-    padding: 3px;
+    padding: 1px;
     /* border-radius: 20px; */
     font-size: 11px;
-    line-height: 8px;
+    line-height: 2px;
     margin-left: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -253,8 +253,8 @@ margin-left: 160px;
 
 export const Evolutions = styled.div`
   display: flex;
-  grid-row: 5/4;
-  grid-column: 1/2;
+  grid-row: 2/3;
+  grid-column: 3/4;
   height: 250px;
   width: 400px;
   background-color: #fff;
