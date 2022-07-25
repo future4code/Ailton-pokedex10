@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 480px){
     width: 100%;
+    margin-left: 0px;
   }
 
 `;
@@ -19,6 +20,7 @@ export const Loading = styled.img`
   @media screen and (max-width: 480px){
     width:130px;
   height: 120px;
+  margin-left: 150px;
   }
 `;
 
@@ -31,7 +33,7 @@ export const PrincipalCard = styled.div`
   height: 410px;
   border-radius: 12px;
   position: relative;
-  margin-left: 50px;
+  margin-left: 15px;
   z-index: 1;
   /* margin-top: -150px; */
   padding: 10px;
@@ -40,7 +42,7 @@ export const PrincipalCard = styled.div`
     display: grid;
     width: 330px;
     height: 1060px;
-    margin-left: -140px;
+    /* margin-left: -40px; */
   grid-template-columns: 50% 50% ;
   grid-template-rows: 195px 195px 195px 195px 195px;
   /* padding-bottom: 10px; */
@@ -279,7 +281,7 @@ export const Evolutions = styled.div`
   width: 330px;
 grid-row: 5/6 ;
 margin-top: -5px;
-margin-left: 3px;
+margin-left: -370px;
 
 }
 `;

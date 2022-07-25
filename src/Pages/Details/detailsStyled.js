@@ -17,11 +17,12 @@ export const Container = styled.div`
     margin: 0 0 30px 0;
     text-align: center;
   }
-  @media screen and (max-width: 480px){
-
-  }
+ 
 `;
 export const Card = styled.div`
 margin-left: 100px;
 margin-top: 280px;
+@media screen and (max-width: 480px){
+  margin-left: 0px;
+}
 `;

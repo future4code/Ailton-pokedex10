@@ -20,6 +20,7 @@ export const PrincipalCard = styled.div`
   }
   @media screen and (max-width: 480px) {
  margin-left: 10px;
+ margin-top: 20px;
   }
 `;
 
@@ -367,8 +368,9 @@ export const ContainerBusca = styled.div`
   }
   @media screen and (max-width: 480px){
     position: none;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 50px;
+    z-index: 2;
 
   }
 `;
