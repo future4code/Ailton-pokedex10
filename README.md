@@ -27,7 +27,7 @@ Link do Surge: https://amuck-authority.surge.sh
 ## Prints do projeto:
 
 <p>Página Inicial</p>
-<img src=".png" alt="tela-inicial" width="350px" height="200px"/>
+<img src="https://user-images.githubusercontent.com/104534180/180691810-a00c8a89-0f64-4dce-8458-e44ebdf1a24a.png" alt="tela-inicial" width="350px" height="200px"/>
 
 <p>Página Pokedex</p>
 <img src="https://user-images.githubusercontent.com/104534180/180692075-528163b4-7282-406d-8e80-0b7eb947b5ba.png" alt="tela-pokedex" width="350px" height="200px"/>
