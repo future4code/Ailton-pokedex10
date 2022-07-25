@@ -30,10 +30,10 @@ Link do Surge: https://amuck-authority.surge.sh
 <img src=".png" alt="tela-inicial" width="350px" height="200px"/>
 
 <p>Página Pokedex</p>
-<img src="https://user-images.githubusercontent.com/104534180/180691810-a00c8a89-0f64-4dce-8458-e44ebdf1a24a.png" alt="tela-pokedex" width="350px" height="200px"/>
+<img src="https://user-images.githubusercontent.com/104534180/180692075-528163b4-7282-406d-8e80-0b7eb947b5ba.png" alt="tela-pokedex" width="350px" height="200px"/>
 
 <p>Página Detalhes</p>
-<img src="https://user-images.githubusercontent.com/100432523/180667351-127c865e-5c08-4b07-9df9-06e6935d8a59.png" alt="tela-detalhes" width="350px" height="200px"/>
+<img src="https://user-images.githubusercontent.com/104534180/180691988-67893999-c332-46cf-a43d-1ace581a21c0.png" alt="tela-detalhes" width="350px" height="200px"/>
 
 <p>Batalha</p>
-<img src="https://user-images.githubusercontent.com/100432523/180667348-58cf8554-d398-4ffd-b5ea-60b17b5c4bd1.png" alt="tela-batalha" width="350px" height="200px"/>
+<img src="https://user-images.githubusercontent.com/104534180/180692137-4a23f2ec-aa3a-42d4-9247-d9190c78da3d.png" alt="tela-batalha" width="350px" height="200px"/>
