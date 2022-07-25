@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Murilo Caun Henrique
 - Igor de Castro
 
-Link do Surge: https://courageous-night.surge.sh/
+Link do Surge: https://amuck-authority.surge.sh
 
 ### Página inicial (home)
 #### Funciona:<br>
