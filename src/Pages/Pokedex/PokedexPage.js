@@ -10,6 +10,20 @@ import {
   RemoveButton,
   HeaderPokedex,
   ContainerMap,
+  ButtonBattle,
+  ContainerBattle,
+  ImageFirstPokemon,
+  ContainerFirstPokemon,
+  ContainerSecondPokemon,
+  ContainerBattlePokemons,
+  ImageSecondPokemon,
+  ImageUpToBattle,
+  ImageBackground,
+  ContainerBattleee,
+  ContainerPickYourPokemons,
+  ButtonsBattle,
+  ButtonsBattleHide,
+  OtherPokemon,
 } from "./pokedexStyled";
 import { GlobalContext } from "../../global/GlobalContext";
 import styled from "styled-components";
@@ -25,174 +39,11 @@ import {
 } from "../Home/cardHomeStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import Pokedex from "../../assests/img/PokedexHeader.jpg";
-import { startBattle, renderLeftBackground, renderRightBackground  } from "./battleFight";
-
-const ButtonBattle = styled.button`
-  position: absolute;
-  top: 0;
-  right: 10%;
-  height: 50px;
-  width: 90px;
-  margin-top: 20px;
-  border-radius: 20%;
-  background-color: #ffc400 ;
-  border: #005e81 ;
-`;
-
-const ContainerBattle = styled.div`
-  width: 500px;
-  height: 200px;
-  box-shadow: 1px 1px 5px black;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0 20px 0px;
-  position: relative;
-  background-color: white;
-
-  p {
-    font-size: 32px;
-    margin: 0;
-  }
-
-  img {
-    width: 70px;
-    height: 70px;
-  }
-`;
-
-const ImageFirstPokemon = styled.img`
-  -webkit-transform: rotateY(180deg);
-  z-index: 2;
-`;
-
-const ContainerFirstPokemon = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  z-index: 2;
-
-  p {
-    z-index: 2;
-  }
-`;
-
-const ContainerSecondPokemon = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  z-index: 2;
-
-  p {
-    z-index: 2;
-  }
-`;
-
-const ContainerBattlePokemons = styled.div`
-  display: flex;
-  width: 100%;
-  z-index: 2;
-`;
-
-const ImageSecondPokemon = styled.img`
-  z-index: 2;
-`;
-
-const ImageUpToBattle = styled.img`
-  width: 45px;
-  height: 25px;
-  position: absolute;
-  left: 26%;
-  bottom: 39%;
-  z-index: 2;
-`;
-
-const ImageBackground = styled.img`
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  transform: rotate(30deg);
-  opacity: 0.17;
-  z-index: 1;
-  top: 5px;
-`;
-
-const ContainerBattleee = styled.div`
-  margin: -150px 0 100px 31.5%;
-
-  button {
-    z-index: 2;
-  }
-`;
-
-const ContainerPickYourPokemons = styled.div`
-  position: absolute;
-  left: 42%;
-  top: 33%;
-  background-color: #e3767b;
-  border-radius: 6px;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const ButtonsBattle = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 10px;
-  width: 116px;
-  height: 28px;
-  z-index: 2;
-  color: white;
-  background: black;
-  border-radius: 8px;
-  border: none;
-  font-size: 15px;
-  line-height: 24px;
-  font-family: Verdana;
-  font-weight: bold;
-  -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-
-  :hover {
-    background: #d5011d;
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-
-    box-shadow: 0 0 40px 40px #d5011d inset;
-  }
-`;
-
-const ButtonsBattleHide = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 10px;
-  width: 116px;
-  height: 28px;
-  z-index: 2;
-  display: hidden;
-  background: #ffffff;
-  border-radius: 8px;
-  border: none;
-  font-size: 15px;
-  line-height: 24px;
-  font-family: Verdana;
-  font-weight: bold;
-  -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-`;
+import {
+  startBattle,
+  renderLeftBackground,
+  renderRightBackground,
+} from "./battleFight";
 
 const PokedexPage = () => {
   const navigate = useNavigate();
@@ -239,7 +90,7 @@ const PokedexPage = () => {
   };
 
   const renderPokemons = values.pokemonsInsidePokedex?.map((pokemon) => {
-    const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
+    const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon.id}.png`;
     return (
       <PrincipalCard key={pokemon.id}>
         <CardsBackground color={pokemon.types[0].type.name}></CardsBackground>
@@ -317,7 +168,7 @@ const PokedexPage = () => {
       )}
       {battleOn && !battlePokemon[0] && (
         <ContainerPickYourPokemons>
-          <p>Escolha seus pokemons!</p>
+          <p>Escolha seus pokemons</p>
         </ContainerPickYourPokemons>
       )}
       {battleOn && (
@@ -356,10 +207,10 @@ const PokedexPage = () => {
               </ContainerBattlePokemons>
               {battlePokemon.length === 2 ? (
                 <RemoveButton onClick={() => startBattlee()}>
-                  Começar!
+                  Começar
                 </RemoveButton>
               ) : (
-                <button disabled>Escolha outro pokemon!</button>
+                <OtherPokemon disabled>Escolha outro pokemon</OtherPokemon>
               )}
             </ContainerBattle>
           )}

@@ -18,6 +18,9 @@ export const PrincipalCard = styled.div`
 -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
+  @media screen and (max-width: 480px) {
+ margin-left: 10px;
+  }
 `;
 
 export const Info = styled.div`
@@ -275,7 +278,6 @@ export const CaptureButton = styled.div`
     color: #fff;
     font-weight: bold;
     font-size: 17px;
-
     box-shadow: 0 0 40px 40px #014059 inset;
   }
 
@@ -306,3 +308,86 @@ display: flex;
 
 }
 `
+export const VerMais = styled.button`
+margin-left: 44%;
+background-color: none ;
+background: none;
+border-radius: 8%;
+border: none;
+color: #fff;
+/* width: 130px;
+height: 30px; */
+font-size: 16px;
+font-weight: bold;
+
+:hover{
+    text-decoration: underline;
+  /* font-size: 18px; */
+}
+
+@media screen and (max-width: 480px){
+  margin-left: 33%;
+}
+
+`;
+
+export const ContainerMap = styled.div`
+  width: 98vw;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const ContainerBusca = styled.div`
+  position: absolute;
+  left: 6%;
+  top: 15%;
+  margin-top: -4.5%;
+ 
+  input{
+    background-color: #dfebf1;
+    width: 170px;
+    height: 25px;
+    border: #d1dee4;
+    border-radius: 4%;
+    margin-right: 5px;
+  }
+  button{
+    border: #014059;
+  color: #fff;
+  height: 25px;
+  font-size: 13px;
+  border-radius: 8%;
+  font-weight: bold;
+  background-color: #014059;
+
+  :active {
+    background-color: #015e82;
+  }
+  
+  }
+  @media screen and (max-width: 480px){
+    position: none;
+    margin-top: 40px;
+    margin-left: 50px;
+
+  }
+`;
+
+export const ButtonBackSearch = styled.button`
+  position: absolute;
+  left: 6%;
+  top: 15%;
+  background-color: #014059;
+  border: #014059;
+  margin-top: -4.5%;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 8%;
+  font-weight: bold;
+  height: 25px;
+
+  :active {
+    background-color: #015e82;
+  }
+
+`;
