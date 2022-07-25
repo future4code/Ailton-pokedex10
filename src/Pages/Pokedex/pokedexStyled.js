@@ -104,7 +104,7 @@ export const ButtonBattle = styled.button`
   }
   @media screen and (max-width: 480px) {
     margin-top: 120px;
-    right: 49%;
+    right: 40%;
   }
 `;
 
