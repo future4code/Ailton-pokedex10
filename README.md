@@ -30,7 +30,7 @@ Link do Surge: https://amuck-authority.surge.sh
 <img src=".png" alt="tela-inicial" width="350px" height="200px"/>
 
 <p>Página Pokedex</p>
-<img src="https://user-images.githubusercontent.com/100432523/180667349-d4051ffd-f4c8-4d46-8060-708ca9e4d6e1.png" alt="tela-pokedex" width="350px" height="200px"/>
+<img src="https://user-images.githubusercontent.com/104534180/180691810-a00c8a89-0f64-4dce-8458-e44ebdf1a24a.png" alt="tela-pokedex" width="350px" height="200px"/>
 
 <p>Página Detalhes</p>
 <img src="https://user-images.githubusercontent.com/100432523/180667351-127c865e-5c08-4b07-9df9-06e6935d8a59.png" alt="tela-detalhes" width="350px" height="200px"/>
