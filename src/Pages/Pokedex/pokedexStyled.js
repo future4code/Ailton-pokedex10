@@ -9,6 +9,10 @@ export const Container = styled.div`
   flex-direction: column;
   /* padding-top: 15%; */
   z-index: 1;
+
+  @media screen and (max-width: 480px) {
+    /* display: none; */
+  }
 `;
 
 export const ContainerMap = styled.div`
@@ -241,11 +245,11 @@ export const ContainerPickYourPokemons = styled.div`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   @media screen and (max-width: 480px) {
-    margin-top: 130px;
+    margin-top: 150px;
     z-index: 2;
     margin-bottom: 50px;
     left: 23%;
-    background-color: white;
+   background-color: white;
     color: black;
     font-weight: bold;
     box-shadow: 1px 2px 3px;
