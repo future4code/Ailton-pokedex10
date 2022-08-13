@@ -17,6 +17,7 @@ import rock from "../../assests/img/battleimg/rock.png";
 import steel from "../../assests/img/battleimg/steel.jpg";
 import water from "../../assests/img/battleimg/water.jpg";
 import psychicbackground from "../../assests/img/battleimg/psychicbackground.png";
+import { alertBattleAdvantage, alertBattleAdvantageLost, alertBattleAdvantageDraw, alertBattle } from "../../services/alertSweet/alertBattle"
 
 const Background = styled.div`
   background-image: url(${(props) => props.url});
@@ -62,43 +63,31 @@ export const startBattle = (pokemon1, pokemon2) => {
 
   const battleTypeAdvantageResults = () => {
     if (firstPokemonStats * 1.3 > secondPokemonStats) {
-      alert(
-        `${pokemon1.name} venceu esta batalha com ${
-          firstPokemonStats * 1.3
-        } pontos (+30%) contra ${secondPokemonStats} pontos!
-${type1} possui vantagem contra ${type2}`
-      );
+      alertBattleAdvantage(pokemon1, pokemon2, firstPokemonStats, secondPokemonStats)
     } else if (firstPokemonStats * 1.3 < secondPokemonStats) {
-      alert(`${pokemon2.name} venceu esta batalha mesmo com desvantagem!`);
+      alertBattleAdvantageLost(pokemon1, pokemon2, firstPokemonStats, secondPokemonStats)
     } else {
-      alert(`Empataram!`);
+      alertBattleAdvantageDraw();
     }
   };
 
   const battleTypeDisadvantageResults = () => {
     if (firstPokemonStats > secondPokemonStats * 1.3) {
-      alert(`${pokemon1.name} venceu esta batalha mesmo com desvantagem!`);
+      alertBattleAdvantageLost(pokemon2, pokemon1, secondPokemonStats, firstPokemonStats)
     } else if (firstPokemonStats < secondPokemonStats * 1.3) {
-      alert(
-        `${pokemon2.name} venceu esta batalha com ${
-          secondPokemonStats * 1.3
-        } pontos (+30%) contra ${firstPokemonStats} pontos!
-${type1} possui desvantagem contra ${type2}`
-      );
+      alertBattleAdvantage(pokemon2, pokemon1, secondPokemonStats, firstPokemonStats)
     } else {
-      alert(`Empataram!`);
+      alertBattleAdvantageDraw();
     }
   };
 
   const battleResults = () => {
     if (firstPokemonStats > secondPokemonStats) {
-      alert(
-        `${pokemon1.name} venceu esta batalha com ${firstPokemonStats} pontos contra ${secondPokemonStats} pontos!`
-      );
+      alertBattle(pokemon1, pokemon2, firstPokemonStats, secondPokemonStats)
     } else if (firstPokemonStats < secondPokemonStats) {
-      alert(`${pokemon2.name} venceu esta batalha!`);
+      alertBattle(pokemon2, pokemon1, secondPokemonStats, firstPokemonStats)
     } else {
-      alert(`Empataram!`);
+      alertBattleAdvantageDraw();
     }
   };
 

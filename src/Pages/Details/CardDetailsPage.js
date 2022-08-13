@@ -7,7 +7,6 @@ import {
   Types,
   Container,
   Photo1,
-  Photo2,
   InfoPoke,
   Moves,
   Loading,
@@ -15,7 +14,7 @@ import {
 } from "./CardDetailsStyled";
 import Pokebola from "../../assests/img/Pokebola.png";
 import { GlobalContext } from "../../global/GlobalContext";
-import { CardsBackground } from "../CardsBackgroundColor";
+import { CardsBackground } from "../../services/CardsBackgroundColor";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import LoadingGif from "../../assests/img/loading.gif";
@@ -173,7 +172,6 @@ const CardHomePage = () => {
   };
 
   const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pathParams.id}.png`;
-  const urlPhoto1 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pathParams.id}.png`;
   const urlGif = `https://pokemon-react-635a4.web.app/images/animated/${pathParams.id}.gif`;
   console.log(pokemonDetail);
 
@@ -198,9 +196,6 @@ const CardHomePage = () => {
           <Photo1>
             <img src={urlGif} alt="pokemon" width="80px" />
           </Photo1>
-          {/* <Photo2>
-            <img src={urlPhoto1} alt="pokemon" width="80px" />
-          </Photo2> */}
           <InfoPoke>
             <ContainerStats>
               {pokemonDetail.stats.map((stats, index) => {
