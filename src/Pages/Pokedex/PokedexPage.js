@@ -2,11 +2,9 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { goToDetails } from "../../Routes/coordinator";
 import Header from "../../Header/Header";
-import { CardsBackground } from "../CardsBackgroundColor";
+import { CardsBackground } from "../../services/CardsBackgroundColor";
 import {
-  ButtonHome,
   Container,
-  Card,
   RemoveButton,
   HeaderPokedex,
   ContainerMap,
@@ -17,8 +15,6 @@ import {
   ContainerSecondPokemon,
   ContainerBattlePokemons,
   ImageSecondPokemon,
-  ImageUpToBattle,
-  ImageBackground,
   ContainerBattleee,
   ContainerPickYourPokemons,
   ButtonsBattle,
@@ -26,7 +22,6 @@ import {
   OtherPokemon,
 } from "./pokedexStyled";
 import { GlobalContext } from "../../global/GlobalContext";
-import styled from "styled-components";
 import {
   PrincipalCard,
   ImagemPokemon,

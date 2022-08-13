@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -17,12 +16,13 @@ export const Container = styled.div`
     margin: 0 0 30px 0;
     text-align: center;
   }
- 
 `;
+
 export const Card = styled.div`
-margin-left: 100px;
-margin-top: 280px;
-@media screen and (max-width: 480px){
-  margin-left: 0px;
-}
+  margin-left: 100px;
+  margin-top: 280px;
+
+  @media screen and (max-width: 480px) {
+    margin-left: 0px;
+  }
 `;

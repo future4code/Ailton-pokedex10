@@ -9,8 +9,6 @@ import {
   Info,
   Types,
   Buttons,
-  Icon,
-  TypeText,
   Capturado,
   ButtonCapture,
   VerMais,
@@ -21,10 +19,10 @@ import {
 import Pokebola from "../../assests/img/Pokebola.png";
 import { goToDetails } from "../../Routes/coordinator";
 import { GlobalContext } from "../../global/GlobalContext";
-import styled from "styled-components";
-import { CardsBackground } from "../CardsBackgroundColor";
+import { CardsBackground } from "../../services/CardsBackgroundColor";
 import { useRequestData } from "../../hooks/useRequestData";
 import axios from "axios";
+import { alertSearchPokemon } from "../../services/alertSweet/alertSearchPokemon"
 
 const CardHomePage = () => {
   const navigate = useNavigate();
@@ -43,7 +41,8 @@ const CardHomePage = () => {
         setPokemonFound([res.data]);
       })
       .catch((err) => {
-        alert("Nome de pokemon não encontrado.");
+        alertSearchPokemon()
+        // alert("Nome de pokemon não en:contrado.");
       });
     setInputSearch("");
   };

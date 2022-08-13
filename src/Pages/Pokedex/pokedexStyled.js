@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -7,11 +6,9 @@ export const Container = styled.div`
   min-height: 100vh;
   height: 100%;
   flex-direction: column;
-  /* padding-top: 15%; */
   z-index: 1;
 
   @media screen and (max-width: 480px) {
-    /* display: none; */
   }
 `;
 
@@ -23,7 +20,6 @@ export const ContainerMap = styled.div`
   padding-bottom: 30px;
 
   @media screen and (max-width: 480px) {
-    /* display: none; */
     margin-top: 40px;
   }
 `;
@@ -67,8 +63,6 @@ export const RemoveButton = styled.button`
 export const HeaderPokedex = styled.img`
   display: flex;
   justify-content: end;
-  /* align-items: center; */
-  /* padding-bottom: 30px; */
   margin-left: 575px;
   margin-top: -70px;
   z-index: 1;
@@ -98,7 +92,6 @@ export const ButtonBattle = styled.button`
   :hover {
     background: black;
     color: #d5011d;
-    /* font-weight: bold; */
     font-size: 16px;
     box-shadow: 0 0 40px 40px black inset;
   }
@@ -120,7 +113,6 @@ export const ContainerBattle = styled.div`
   margin: 10px 0 20px 0px;
   position: relative;
   background-color: white;
-  /* border: 10px solid black; */
 
   p {
     font-size: 32px;

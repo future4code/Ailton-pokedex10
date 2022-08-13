@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { GlobalContext } from "./GlobalContext";
-// import { TypeNormal, TypeFire, TypeWater, TypeGrass, TypeFlying, TypePoison, TypeElectric, TypeGround, TypeRock, TypePsychic, TypeIce, TypeBug, TypeGhost, TypeSteel, TypeDragon, TypeDark, TypeFairy} from "../styled-components/TypeBackgroundColor"
 import { useRequestData } from "../hooks/useRequestData";
 import { Icon, TypeText } from "../Pages/Home/cardHomeStyled";
-import { TypePokemon } from "../Pages/TypesBackgroundColor";
+import { TypePokemon } from "../services/TypesBackgroundColor"
 import Poison from "../assests/img/Poison.png";
 import Grass from "../assests/img/Grass.png";
 import bug from "../assests/img/bug.png";
