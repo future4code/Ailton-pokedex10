@@ -22,7 +22,6 @@ import {
   OtherPokemon,
 } from "./pokedexStyled";
 import { GlobalContext } from "../../global/GlobalContext";
-import styled from "styled-components";
 import {
   PrincipalCard,
   ImagemPokemon,

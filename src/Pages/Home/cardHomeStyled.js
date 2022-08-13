@@ -12,15 +12,15 @@ export const PrincipalCard = styled.div`
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
   z-index: 1;
-    cursor: pointer;
+  cursor: pointer;
 
-  :hover{
--webkit-transform: scale(1.03);
+  :hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
   @media screen and (max-width: 480px) {
- margin-left: 10px;
- margin-top: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
   }
 `;
 
@@ -31,7 +31,6 @@ export const Info = styled.div`
   z-index: 2;
   width: 175px;
   height: 70px;
-  /* border: 1px solid black; */
 
   h1 {
     display: flex;
@@ -62,7 +61,6 @@ export const ImagemPokemon = styled.div`
     width: 160px;
     height: 160px;
     z-index: 2;
-    
   }
 `;
 
@@ -86,7 +84,6 @@ export const Types = styled.div`
   margin-left: 20px;
   width: 150px;
   height: 30px;
-  /* border: 1px solid black; */
 `;
 
 export const Icon = styled.img`
@@ -100,7 +97,7 @@ export const TypeText = styled.p`
   color: #ffffff;
   font-family: Verdana;
 `;
-export const PrincipalCardPoison= styled.div`
+export const PrincipalCardPoison = styled.div`
   display: flex;
   width: 340px;
   height: 180px;
@@ -111,10 +108,10 @@ export const PrincipalCardPoison= styled.div`
   border: 1px solid white;
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
-    cursor: pointer;
+  cursor: pointer;
 
-  :hover{
--webkit-transform: scale(1.03);
+  :hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
 `;
@@ -132,7 +129,7 @@ export const TypePoison = styled.div`
   z-index: 2;
 `;
 
-export const PrincipalCardGrass= styled.div`
+export const PrincipalCardGrass = styled.div`
   display: flex;
   width: 340px;
   height: 180px;
@@ -143,10 +140,10 @@ export const PrincipalCardGrass= styled.div`
   border: 1px solid white;
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
-    cursor: pointer;
+  cursor: pointer;
 
-  :hover{
--webkit-transform: scale(1.03);
+  :hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
 `;
@@ -161,31 +158,30 @@ export const TypeGrass = styled.div`
   width: 56px;
   height: 18px;
   background: #70b873;
-  /* background: ${(props) => props.color}; */
   border: 1px dashed rgba(255, 255, 255, 0.47);
   border-radius: 8px;
 `;
 
-export const PrincipalCardFire= styled.div`
+export const PrincipalCardFire = styled.div`
   display: flex;
   width: 340px;
   height: 180px;
-  background: #EAAB7D;
+  background: #eaab7d;
   border-radius: 12px;
   margin-left: 75px;
   margin-bottom: 60px;
   border: 1px solid white;
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
-    cursor: pointer;
+  cursor: pointer;
 
-  :hover{
--webkit-transform: scale(1.03);
+  :hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
 `;
 
-export const PrincipalCardFlying= styled.div`
+export const PrincipalCardFlying = styled.div`
   display: flex;
   width: 340px;
   height: 180px;
@@ -196,15 +192,15 @@ export const PrincipalCardFlying= styled.div`
   border: 1px solid white;
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
-    cursor: pointer;
+  cursor: pointer;
 
-  :hover{
--webkit-transform: scale(1.03);
+  :hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
 `;
 
-export const PrincipalCardWater= styled.div`
+export const PrincipalCardWater = styled.div`
   display: flex;
   width: 340px;
   height: 180px;
@@ -215,10 +211,10 @@ export const PrincipalCardWater= styled.div`
   border: 1px solid white;
   box-shadow: 10px 5px 20px black;
   transition: all 0.1s;
-    cursor: pointer;
+  cursor: pointer;
 
-  :hover{
--webkit-transform: scale(1.03);
+  :hover {
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
 `;
@@ -246,7 +242,6 @@ export const DetailButton = styled.button`
   :hover {
     color: #012231;
     text-decoration: none;
-    
   }
 `;
 export const CaptureButton = styled.div`
@@ -254,26 +249,26 @@ export const CaptureButton = styled.div`
   flex-direction: row;
   color: #ffffff;
   margin-left: 110px;
-  `
-  export const ButtonCapture = styled.button`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 10px;
-    width: 116px;
-    height: 28px;
-    z-index: 2;
-    background: #ffffff;
-    border-radius: 8px;
-    border: none;
-    font-size: 15px;
-    line-height: 24px;
-    font-family: Verdana;
-    font-weight: bold;
-    -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  
+`;
+export const ButtonCapture = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  width: 116px;
+  height: 28px;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: Verdana;
+  font-weight: bold;
+  -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
   :hover {
     background: #014059;
     color: #fff;
@@ -281,55 +276,49 @@ export const CaptureButton = styled.div`
     font-size: 17px;
     box-shadow: 0 0 40px 40px #014059 inset;
   }
-
 `;
 
 export const Capturado = styled.button`
-display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 10px;
-    width: 116px;
-    height: 28px;
-    z-index: 2;
-    background: #ffffff;
-    border-radius: 8px;
-    border: none;
-    font-size: 15px;
-    line-height: 24px;
-    font-family: Verdana;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  width: 116px;
+  height: 28px;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: Verdana;
+  font-weight: bold;
+  -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  :hover {
+    background: #fff;
     font-weight: bold;
-    -webkit-transition: box-shadow 300 ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-:hover{
-  background: #fff;
-    font-weight: bold;
     font-size: 15px;
-
-}
-`
+  }
+`;
 export const VerMais = styled.button`
-margin-left: 44%;
-background-color: none ;
-background: none;
-border-radius: 8%;
-border: none;
-color: #fff;
-/* width: 130px;
-height: 30px; */
-font-size: 16px;
-font-weight: bold;
+  margin-left: 44%;
+  background-color: none;
+  background: none;
+  border-radius: 8%;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 
-:hover{
+  :hover {
     text-decoration: underline;
-  /* font-size: 18px; */
-}
+  }
 
-@media screen and (max-width: 480px){
-  margin-left: 33%;
-}
-
+  @media screen and (max-width: 480px) {
+    margin-left: 33%;
+  }
 `;
 
 export const ContainerMap = styled.div`
@@ -343,8 +332,8 @@ export const ContainerBusca = styled.div`
   left: 6%;
   top: 15%;
   margin-top: -4.5%;
- 
-  input{
+
+  input {
     background-color: #dfebf1;
     width: 170px;
     height: 25px;
@@ -352,26 +341,24 @@ export const ContainerBusca = styled.div`
     border-radius: 4%;
     margin-right: 5px;
   }
-  button{
+  button {
     border: #014059;
-  color: #fff;
-  height: 25px;
-  font-size: 13px;
-  border-radius: 8%;
-  font-weight: bold;
-  background-color: #014059;
+    color: #fff;
+    height: 25px;
+    font-size: 13px;
+    border-radius: 8%;
+    font-weight: bold;
+    background-color: #014059;
 
-  :active {
-    background-color: #015e82;
+    :active {
+      background-color: #015e82;
+    }
   }
-  
-  }
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     position: none;
     margin-top: 30px;
     margin-left: 50px;
     z-index: 2;
-
   }
 `;
 
@@ -391,5 +378,4 @@ export const ButtonBackSearch = styled.button`
   :active {
     background-color: #015e82;
   }
-
 `;

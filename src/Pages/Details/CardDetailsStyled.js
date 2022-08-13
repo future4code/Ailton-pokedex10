@@ -5,11 +5,10 @@ export const Container = styled.div`
   margin-left: 50px;
   margin-top: -180px;
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     width: 100%;
     margin-left: 0px;
   }
-
 `;
 export const Loading = styled.img`
   margin-left: 350px;
@@ -17,10 +16,10 @@ export const Loading = styled.img`
   width: 230px;
   height: 220px;
 
-  @media screen and (max-width: 480px){
-    width:130px;
-  height: 120px;
-  margin-left: 150px;
+  @media screen and (max-width: 480px) {
+    width: 130px;
+    height: 120px;
+    margin-left: 150px;
   }
 `;
 
@@ -35,18 +34,14 @@ export const PrincipalCard = styled.div`
   position: relative;
   margin-left: 15px;
   z-index: 1;
-  /* margin-top: -150px; */
   padding: 10px;
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     display: grid;
     width: 330px;
     height: 1060px;
-    /* margin-left: -40px; */
-  grid-template-columns: 50% 50% ;
-  grid-template-rows: 195px 195px 195px 195px 195px;
-  /* padding-bottom: 10px; */
-
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 195px 195px 195px 195px 195px;
   }
 `;
 
@@ -78,32 +73,28 @@ export const Info = styled.div`
     margin-bottom: -25px;
   }
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-top: -10px;
     margin-left: -15px;
     width: 130px;
-
-}
-
+  }
 `;
 
 export const ImagemPokemon = styled.div`
   display: flex;
   grid-column: 4/5;
   margin-top: -100px;
-  
 
   img {
     width: 220px;
     height: 220px;
     z-index: 2;
   }
-  @media screen and (max-width: 480px){
-display: none;
-
- }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const ImagemBackground = styled.div`
@@ -117,13 +108,11 @@ export const ImagemBackground = styled.div`
     width: 430px;
     height: 430px;
     opacity: 0.17;
-    /* transform: rotate(30deg); */
   }
 
-  @media screen and (max-width: 480px){
-display: none;
-
- }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const Types = styled.div`
@@ -133,18 +122,6 @@ export const Types = styled.div`
   margin-left: 20px;
   width: 150px;
   height: 30px;
-`;
-
-export const Icon = styled.img`
-  height: 14px;
-`;
-
-export const TypeText = styled.p`
-  font-weight: bold;
-  font-size: 10px;
-  line-height: 21px;
-  color: #ffffff;
-  font-family: Verdana;
 `;
 
 export const Photo1 = styled.div`
@@ -161,17 +138,16 @@ export const Photo1 = styled.div`
     margin-top: 15%;
     margin-left: 24%;
   }
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     height: 130px;
-  width: 130px;
-grid-column: 2/3;
-margin-top: -60px;
-}
-  
+    width: 130px;
+    grid-column: 2/3;
+    margin-top: -60px;
+  }
 `;
 
 export const InfoPoke = styled.div`
-  grid-column : 2/3;
+  grid-column: 2/3;
   height: 380px;
   width: 240px;
   background-color: #fff;
@@ -197,23 +173,22 @@ export const InfoPoke = styled.div`
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    margin-left: 30px;
+    margin-top: -60px;
+    height: 500px;
+    width: 280px;
 
-grid-row: 2/3;
-grid-column: 1/4;
-margin-left: 30px;
-margin-top: -60px;
-height: 500px;
-  width: 280px;
+    h3 {
+      margin-left: 100px;
+    }
 
-  h3{
-   margin-left: 100px;
+    p {
+      margin-left: 80px;
+    }
   }
-
-  p{
-    margin-left: 80px;  
-  }
-}
 `;
 
 export const Moves = styled.div`
@@ -244,13 +219,13 @@ export const Moves = styled.div`
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     margin-top: 30px;
-grid-row: 4/5;
-height: 155px;
-width: 330px;
-margin-left: 160px;
-}
+    grid-row: 4/5;
+    height: 155px;
+    width: 330px;
+    margin-left: 160px;
+  }
 `;
 
 export const Evolutions = styled.div`
@@ -276,12 +251,99 @@ export const Evolutions = styled.div`
     display: flex;
   }
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     height: 200px;
-  width: 330px;
-grid-row: 5/6 ;
-margin-top: -5px;
-margin-left: -370px;
+    width: 330px;
+    grid-row: 5/6;
+    margin-top: -5px;
+    margin-left: -370px;
+  }
+`;
 
-}
-  `;
+export const ContainerEvolution = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: #ececec;
+  width: 120px;
+  height: 130px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: grey;
+  border: 1px solid #ececec;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  div {
+    display: flex;
+    gap: 5px;
+  }
+`;
+
+export const ImageEvolution = styled.img`
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+`;
+
+export const BarStat = styled.div`
+  height: 7px;
+  background: ${(props) => {
+    if (props.number < 50) {
+      return "#ffdd69";
+    } else if (props.number < 80) {
+      return "#ff7c2d";
+    } else {
+      return "#e05704";
+    }
+  }};
+  border-radius: 6px;
+  width: ${({ percent }) => percent}%;
+`;
+
+export const BarStatLength = styled.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+`;
+
+export const Stats = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  p {
+    margin: 0;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+  }
+`;
+
+export const ContainerStatAndBar = styled.div`
+  width: 100%;
+  display: flex;
+
+  p {
+    width: 12%;
+  }
+
+`
+
+export const ContainerStatsMap = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ContainerStats = styled.div`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+`;
+
+export const TotalText = styled.p`
+  font-weight: bold;
+`

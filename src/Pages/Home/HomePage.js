@@ -10,7 +10,6 @@ const HomePage = () => {
   return (
     <Container>
        <Header/>
-           {/* <h2>Pokémons </h2> */}
       <CardHomePage />
     </Container>
   );

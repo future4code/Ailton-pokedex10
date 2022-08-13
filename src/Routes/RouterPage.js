@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, useParams } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/HomePage";
 import Details from "../Pages/Details/DetailsPage";
 import Pokedex from "../Pages/Pokedex/PokedexPage";
