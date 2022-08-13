@@ -378,4 +378,8 @@ export const ButtonBackSearch = styled.button`
   :active {
     background-color: #015e82;
   }
+
+  @media screen and (max-width: 480px){
+    margin-top: 10%;
+  }
 `;
